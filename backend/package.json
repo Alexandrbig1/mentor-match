@@ -1,0 +1,33 @@
+{
+  "name": "mentor-match-backend",
+  "author": "Alex Smagin",
+  "license": "MIT",
+  "description": "Backend for the Mentor Match application, built with Node.js, Express, and MongoDB.",
+  "keywords": [
+    "node",
+    "nodejs",
+    "restapi",
+    "backend",
+    "fullstack",
+    "bootcamp",
+    "express js",
+    "mongodb",
+    "mongoose"
+  ],
+  "main": "server.js",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
