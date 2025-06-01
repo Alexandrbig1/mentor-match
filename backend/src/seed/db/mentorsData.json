@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Alice Johnson",
+    "position": "Senior Frontend Engineer",
+    "phone": "+13125550123",
+    "email": "alice.johnson@example.com",
+    "nmls": "123456",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/alicejohnson",
+      "website": "https://alicejohnson.dev",
+      "portfolio": "https://portfolio.alicejohnson.dev",
+      "facebook": "https://facebook.com/alicejohnson"
+    },
+    "coreValues": ["Integrity", "Continuous Learning", "Collaboration"],
+    "description": "Experienced React developer passionate about mentoring junior developers in UI/UX best practices."
+  },
+  {
+    "name": "Brian Kim",
+    "position": "Full Stack Developer",
+    "phone": "+13125550456",
+    "email": "brian.kim@example.com",
+    "nmls": "234567",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/briankim",
+      "website": "https://briank.dev",
+      "portfolio": "https://portfolio.briank.dev",
+      "facebook": "https://facebook.com/briankim"
+    },
+    "coreValues": ["Empathy", "Discipline", "Problem Solving"],
+    "description": "Mentor focused on helping developers bridge the frontend-backend gap using modern tools like Node.js and MongoDB."
+  },
+  {
+    "name": "Cynthia Lee",
+    "position": "DevOps Engineer",
+    "phone": "+13125550789",
+    "email": "cynthia.lee@example.com",
+    "nmls": "345678",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/cynthialee",
+      "website": "https://cynthialee.io",
+      "portfolio": "https://portfolio.cynthialee.io",
+      "facebook": "https://facebook.com/cynthialee"
+    },
+    "coreValues": ["Ownership", "Automation", "Efficiency"],
+    "description": "DevOps specialist who loves teaching CI/CD, cloud deployment, and system reliability engineering to aspiring engineers."
+  },
+  {
+    "name": "David Ramirez",
+    "position": "Backend Architect",
+    "phone": "+13125550987",
+    "email": "david.ramirez@example.com",
+    "nmls": "456789",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/davidramirez",
+      "website": "https://davidcodes.com",
+      "portfolio": "https://portfolio.davidcodes.com",
+      "facebook": "https://facebook.com/davidramirez"
+    },
+    "coreValues": ["Precision", "Mentorship", "Security"],
+    "description": "Loves working with APIs and databases, and helps junior devs master backend architecture and best practices."
+  },
+  {
+    "name": "Emma Patel",
+    "position": "Software Engineering Manager",
+    "phone": "+13125550321",
+    "email": "emma.patel@example.com",
+    "nmls": "567890",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/emmapatel",
+      "website": "https://emmapatel.dev",
+      "portfolio": "https://portfolio.emmapatel.dev",
+      "facebook": "https://facebook.com/emmapatel"
+    },
+    "coreValues": ["Leadership", "Empowerment", "Diversity"],
+    "description": "Manager with a passion for helping engineers grow their careers through mentorship and goal setting."
+  },
+  {
+    "name": "Samantha Torres",
+    "position": "Frontend Developer",
+    "phone": "+13125550111",
+    "email": "samantha.torres@example.com",
+    "nmls": "934726",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/samanthatorres",
+      "website": "https://samanthadev.dev",
+      "portfolio": "https://portfolio.samanthatorres.dev",
+      "facebook": "https://facebook.com/samantha.codes"
+    },
+    "coreValues": ["Collaboration", "Accessibility", "Continuous Learning"],
+    "description": "Passionate about crafting accessible, user-friendly web interfaces. Always learning and eager to mentor others starting their frontend journey."
+  },
+  {
+    "name": "Daniel Choi",
+    "position": "Full Stack Engineer",
+    "phone": "+17736540988",
+    "email": "daniel.choi@example.com",
+    "nmls": "823614",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/danielchoi",
+      "website": "https://danielchoi.dev",
+      "portfolio": "https://portfolio.danielchoi.dev",
+      "facebook": "https://facebook.com/danielchoi.dev"
+    },
+    "coreValues": ["Efficiency", "Integrity", "Mentorship"],
+    "description": "Software engineer with a love for elegant code and helping others grow. Experienced in Node.js, React, and cloud technologies."
+  },
+  {
+    "name": "Aaliyah Morgan",
+    "position": "Data Scientist",
+    "phone": "+13129990456",
+    "email": "aaliyah.morgan@example.com",
+    "nmls": "738295",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/aaliyahmorgan",
+      "website": "https://aaliyahmorgan.ai",
+      "portfolio": "https://portfolio.aaliyahmorgan.dev",
+      "facebook": "https://facebook.com/aaliyah.datasci"
+    },
+    "coreValues": ["Curiosity", "Empathy", "Impact"],
+    "description": "Data scientist focused on uncovering insights and telling stories with data. Loves teaching Python, ML, and helping others get into data science."
+  },
+  {
+    "name": "Jorge Fernandez",
+    "position": "Backend Developer",
+    "phone": "+13129884567",
+    "email": "jorge.fernandez@example.com",
+    "nmls": "675492",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/jorgefernandez",
+      "website": "https://jorgecodes.dev",
+      "portfolio": "https://portfolio.jorge.dev",
+      "facebook": "https://facebook.com/jorge.fernandez.dev"
+    },
+    "coreValues": ["Resilience", "Clean Code", "Performance"],
+    "description": "Backend specialist with deep experience in Express and MongoDB. Big advocate for clean architecture and performance-driven development."
+  },
+  {
+    "name": "Natalie Brooks",
+    "position": "DevOps Engineer",
+    "phone": "+13124447890",
+    "email": "natalie.brooks@example.com",
+    "nmls": "509184",
+    "socialLinks": {
+      "linkedin": "https://linkedin.com/in/nataliebrooks",
+      "website": "https://nataliebrooks.devops",
+      "portfolio": "https://portfolio.natalieb.dev",
+      "facebook": "https://facebook.com/natalie.devops"
+    },
+    "coreValues": ["Automation", "Accountability", "Teamwork"],
+    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
+  }
+]

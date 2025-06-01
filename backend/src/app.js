@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
-import "dotenv/config";
 import rateLimit from "express-rate-limit";
 import mentorRouter from "./routes/mentor.routes.js";
 
