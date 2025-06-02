@@ -9,34 +9,33 @@ const mentorSchema = new Schema(
     },
     position: {
       type: String,
-      // required: true,
+      required: true,
       trim: true,
     },
+    technologies: { type: [String], required: true },
     phone: {
       type: String,
-      // required: true,
       match: /^\+?[1-9]\d{1,14}$/,
     },
     email: {
       type: String,
-      // required: true,
+      required: true,
       unique: true,
       match: /.+\@.+\..+/, // Basic email validation
     },
-    nmls: {
+    location: {
       type: String,
-      // required: true,
-      unique: true,
-      match: /^[0-9]{6}$/, // NMLS number validation (6 digits)
+      required: true,
+      trim: true,
     },
     socialLinks: {},
     coreValues: {
       type: [String],
-      // required: true,
+      required: true,
     },
     description: {
       type: String,
-      // required: true,
+      required: true,
       trim: true,
     },
   },

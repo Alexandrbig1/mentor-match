@@ -9,6 +9,7 @@ const mentors = JSON.parse(
 
 const seedMentors = async () => {
   try {
+    // console.log(mentors);
     if (process.env.NODE_ENV !== "development") {
       console.log("Seeding is only allowed in development!");
       process.exit(1);

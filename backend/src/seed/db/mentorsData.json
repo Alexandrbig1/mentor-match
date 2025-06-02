@@ -2,9 +2,17 @@
   {
     "name": "Alice Johnson",
     "position": "Senior Frontend Engineer",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "CSS",
+      "Tailwind CSS",
+      "Next.js"
+    ],
     "phone": "+13125550123",
     "email": "alice.johnson@example.com",
-    "nmls": "123456",
+    "location": "Evanston, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/alicejohnson",
       "website": "https://alicejohnson.dev",
@@ -17,9 +25,17 @@
   {
     "name": "Brian Kim",
     "position": "Full Stack Developer",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JavaScript",
+      "TypeScript"
+    ],
     "phone": "+13125550456",
     "email": "brian.kim@example.com",
-    "nmls": "234567",
+    "location": "Naperville, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/briankim",
       "website": "https://briank.dev",
@@ -32,9 +48,18 @@
   {
     "name": "Cynthia Lee",
     "position": "DevOps Engineer",
+    "technologies": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "CI/CD",
+      "Linux",
+      "GitHub Actions"
+    ],
     "phone": "+13125550789",
     "email": "cynthia.lee@example.com",
-    "nmls": "345678",
+    "location": "Schaumburg, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/cynthialee",
       "website": "https://cynthialee.io",
@@ -47,9 +72,19 @@
   {
     "name": "David Ramirez",
     "position": "Backend Architect",
+    "technologies": [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "MongoDB",
+      "GraphQL",
+      "TypeScript",
+      "Redis",
+      "Microservices"
+    ],
     "phone": "+13125550987",
     "email": "david.ramirez@example.com",
-    "nmls": "456789",
+    "location": "Oak Park, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/davidramirez",
       "website": "https://davidcodes.com",
@@ -62,9 +97,17 @@
   {
     "name": "Emma Patel",
     "position": "Software Engineering Manager",
+    "technologies": [
+      "Agile",
+      "Scrum",
+      "Project Management",
+      "Team Leadership",
+      "JIRA",
+      "DevOps Concepts"
+    ],
     "phone": "+13125550321",
     "email": "emma.patel@example.com",
-    "nmls": "567890",
+    "location": "Chicago, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/emmapatel",
       "website": "https://emmapatel.dev",
@@ -77,9 +120,18 @@
   {
     "name": "Samantha Torres",
     "position": "Frontend Developer",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Accessibility (a11y)",
+      "Figma",
+      "Responsive Design"
+    ],
     "phone": "+13125550111",
     "email": "samantha.torres@example.com",
-    "nmls": "934726",
+    "location": "Aurora, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/samanthatorres",
       "website": "https://samanthadev.dev",
@@ -92,9 +144,18 @@
   {
     "name": "Daniel Choi",
     "position": "Full Stack Engineer",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "GraphQL",
+      "TypeScript",
+      "AWS"
+    ],
     "phone": "+17736540988",
     "email": "daniel.choi@example.com",
-    "nmls": "823614",
+    "location": "Skokie, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/danielchoi",
       "website": "https://danielchoi.dev",
@@ -107,9 +168,19 @@
   {
     "name": "Aaliyah Morgan",
     "position": "Data Scientist",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "TensorFlow",
+      "SQL",
+      "Data Visualization",
+      "Machine Learning"
+    ],
     "phone": "+13129990456",
     "email": "aaliyah.morgan@example.com",
-    "nmls": "738295",
+    "location": "Chicago, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/aaliyahmorgan",
       "website": "https://aaliyahmorgan.ai",
@@ -122,9 +193,18 @@
   {
     "name": "Jorge Fernandez",
     "position": "Backend Developer",
+    "technologies": [
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "PostgreSQL",
+      "REST APIs",
+      "Redis",
+      "Unit Testing"
+    ],
     "phone": "+13129884567",
     "email": "jorge.fernandez@example.com",
-    "nmls": "675492",
+    "location": "Naperville, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/jorgefernandez",
       "website": "https://jorgecodes.dev",
@@ -137,9 +217,18 @@
   {
     "name": "Natalie Brooks",
     "position": "DevOps Engineer",
+    "technologies": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Terraform",
+      "CI/CD",
+      "Bash",
+      "Monitoring (Prometheus, Grafana)"
+    ],
     "phone": "+13124447890",
     "email": "natalie.brooks@example.com",
-    "nmls": "509184",
+    "location": "Evanston, IL",
     "socialLinks": {
       "linkedin": "https://linkedin.com/in/nataliebrooks",
       "website": "https://nataliebrooks.devops",
