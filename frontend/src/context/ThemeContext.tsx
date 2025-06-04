@@ -2,7 +2,6 @@ import { createContext, useContext, useState } from "react";
 
 const Theme = createContext();
 
-// eslint-disable-next-line react/prop-types
 export const ThemeContext = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
