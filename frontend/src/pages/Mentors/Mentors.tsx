@@ -1,3 +1,9 @@
+import Form from "./Form/Form";
+
 export default function Mentors() {
-  return <div>Mentors</div>;
+  return (
+    <div>
+      <Form />
+    </div>
+  );
 }
