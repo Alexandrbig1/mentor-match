@@ -3,6 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
 import mentorRouter from "./routes/mentor.routes.js";
+import technologyRouter from "./routes/technologies.routes.js";
 
 const app = express();
 
@@ -17,6 +18,8 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/mentors", mentorRouter);
+
+app.use("/api/technologies", technologyRouter);
 
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
