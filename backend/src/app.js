@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import rateLimit from "express-rate-limit";
-import mentorRouter from "./routes/mentor.routes.js";
+import mentorRouter from "./routes/mentors.routes.js";
 import technologyRouter from "./routes/technologies.routes.js";
 
 const app = express();

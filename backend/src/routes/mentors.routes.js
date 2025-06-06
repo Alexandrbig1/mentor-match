@@ -1,5 +1,5 @@
 import express from "express";
-import mentorController from "../controllers/mentor.controller.js";
+import mentorController from "../controllers/mentors.controller.js";
 
 const mentorRouter = express.Router();
 
