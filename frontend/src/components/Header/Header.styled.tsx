@@ -9,18 +9,21 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: pink;
 `;
 
 export const HeaderNavigationMenu = styled.ul`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  background-color: aquamarine;
 `;
 
 export const HeaderMentorButtonThemeWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  background-color: aliceblue;
 `;
 
 export const HeaderMentorButton = styled.button`

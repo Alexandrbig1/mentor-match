@@ -1,3 +1,5 @@
+import { LogoWrapper } from "./Logo.styled";
+
 export default function Logo() {
-  return <div>Mentor Match</div>;
+  return <LogoWrapper>Mentor Match</LogoWrapper>;
 }

@@ -30,17 +30,6 @@ export const FormNameInput = styled.input`
   padding-left: 3.2rem;
 `;
 
-export const FormNameLabel = styled.label`
-  position: absolute;
-  top: 50%;
-  left: 3.2rem;
-  transform: translateY(-50%);
-  color: ${(p) => p.theme.colors.lightTextColor};
-  font-size: 1.4rem;
-  pointer-events: none;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-`;
-
 export const SearchIcon = styled(FiSearch)`
   position: absolute;
   top: 50%;
