@@ -3,6 +3,7 @@ import Logo from "../Logo/Logo";
 import {
   HeaderContainer,
   HeaderMentorButton,
+  HeaderMentorButtonIcon,
   HeaderMentorButtonThemeWrapper,
   HeaderNavigationMenu,
 } from "./Header.styled";
@@ -24,7 +25,10 @@ export default function Header() {
       </nav>
       <HeaderMentorButtonThemeWrapper>
         <ThemeSwitcher />
-        <HeaderMentorButton>Become a Mentor</HeaderMentorButton>
+        <HeaderMentorButton>
+          Become a Mentor
+          <HeaderMentorButtonIcon />
+        </HeaderMentorButton>
       </HeaderMentorButtonThemeWrapper>
     </HeaderContainer>
   );

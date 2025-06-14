@@ -1,6 +1,8 @@
+import { HeroWrapper } from "./Hero.styled";
+
 export default function Hero() {
   return (
-    <div>
+    <HeroWrapper>
       <div>
         <h1>Dive in Tech with our Mentors Match app</h1>
         <p>
@@ -11,6 +13,6 @@ export default function Hero() {
         <button>Get Started</button>
       </div>
       <img src="" alt="" />
-    </div>
+    </HeroWrapper>
   );
 }

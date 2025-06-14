@@ -1,0 +1,11 @@
+import styled from "styled-components";
+
+export const RootLayoutWrapper = styled.div`
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+  padding-top: 7.2rem;
+`;
