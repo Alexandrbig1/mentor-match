@@ -1,11 +1,12 @@
 import Hero from "../../components/Hero/Hero";
 import Stats from "../../components/Stats/Stats";
+import { HomeContainer } from "./Home.styled";
 
 export default function Home() {
   return (
-    <div>
+    <HomeContainer>
       <Hero />
       <Stats />
-    </div>
+    </HomeContainer>
   );
 }
