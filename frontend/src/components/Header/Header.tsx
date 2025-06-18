@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
+import { ThemeSwitcher } from "../UI/ThemeSwitcher/ThemeSwitcher";
 import {
   HeaderContainer,
   HeaderMentorButton,
@@ -7,7 +8,6 @@ import {
   HeaderMentorButtonThemeWrapper,
   HeaderNavigationMenu,
 } from "./Header.styled";
-import { ThemeSwitcher } from "../UI/ThemeSwitcher/ThemeSwitcher";
 
 export default function Header() {
   return (

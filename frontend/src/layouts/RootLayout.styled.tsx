@@ -10,4 +10,5 @@ export const RootLayoutWrapper = styled.div`
   justify-content: space-between;
   position: relative;
   padding-top: 7.2rem;
+  padding-bottom: 7.2rem;
 `;
