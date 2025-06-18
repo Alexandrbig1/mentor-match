@@ -10,6 +10,11 @@ export const theme = {
       buttonBgHoverColor: "#0466c8",
       ButtonAccentColor: "#BFD6EA",
       formBorderColor: "#dee2e6",
+      youtubeColor: "#cd201f",
+      linkedinColor: "#0a66c2",
+      stackoverflowColor: "#F48024",
+      blackIconsColor: "#000814",
+      linkColor: "#37A4FE",
     },
   },
   dark: {
@@ -22,6 +27,11 @@ export const theme = {
       buttonBgHoverColor: "#0466c8",
       ButtonAccentColor: "#BFD6EA",
       formBorderColor: "#dee2e6",
+      youtubeColor: "#cd201f",
+      linkedinColor: "#0a66c2",
+      stackoverflowColor: "#F48024",
+      blackIconsColor: "#fafaf9",
+      linkColor: "#37A4FE",
     },
   },
 };

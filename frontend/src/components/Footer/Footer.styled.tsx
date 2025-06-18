@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const FooterWrapper = styled.footer`
   margin: 0 auto;
@@ -27,4 +28,23 @@ export const FooterText = styled.p`
   font-size: 1.4rem;
   line-height: 1.33333;
   color: ${(p) => p.theme.colors.lightTextColor};
+`;
+
+export const FooterTextLinkIcon = styled(FaExternalLinkAlt)`
+  font-size: 1.4rem;
+  color: ${(p) => p.theme.colors.lightTextColor};
+  transition: all var(--primary-transition);
+`;
+
+export const FooterTextLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.6rem;
+
+  &:hover {
+    ${FooterTextLinkIcon} {
+      color: ${(p) => p.theme.colors.linkColor};
+    }
+  }
 `;

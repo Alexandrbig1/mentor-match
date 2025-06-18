@@ -1,5 +1,11 @@
 import SocialIcons from "../UI/SocialIcons/SocialIcons";
-import { FooterText, FooterTextWrapper, FooterWrapper } from "./Footer.styled";
+import {
+  FooterText,
+  FooterTextLink,
+  FooterTextLinkIcon,
+  FooterTextWrapper,
+  FooterWrapper,
+} from "./Footer.styled";
 
 function Footer() {
   return (
@@ -7,7 +13,10 @@ function Footer() {
       <FooterTextWrapper>
         <FooterText>
           all rights reserved © 2025 MentorMatch by{" "}
-          <a href="https://www.alexsmagin.dev">Alex Smagin</a>
+          <FooterTextLink href="https://www.alexsmagin.dev">
+            Alex Smagin
+            <FooterTextLinkIcon />
+          </FooterTextLink>
         </FooterText>
       </FooterTextWrapper>
       <SocialIcons />
