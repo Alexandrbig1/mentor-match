@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { primaryFont } from "../fonts";
 import { FaFly } from "react-icons/fa6";
+import { p } from "framer-motion/client";
 
 export const HeroWrapper = styled.section`
   margin: 0 auto;
@@ -16,7 +17,7 @@ export const HeroTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  background-color: #f1f3f5;
+  background-color: ${(p) => p.theme.colors.heroBgLightGreyColor};
   padding: 2.4rem;
   border-radius: 0.8rem;
 `;

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import { ThemeSwitcher } from "../UI/ThemeSwitcher/ThemeSwitcher";
 import {
@@ -7,6 +6,7 @@ import {
   HeaderMentorButtonIcon,
   HeaderMentorButtonThemeWrapper,
   HeaderNavigationMenu,
+  HeaderNavLink,
 } from "./Header.styled";
 
 export default function Header() {
@@ -16,10 +16,10 @@ export default function Header() {
       <nav>
         <HeaderNavigationMenu>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <HeaderNavLink to="/">Home</HeaderNavLink>
           </li>
           <li>
-            <NavLink to="/mentors">Mentors</NavLink>
+            <HeaderNavLink to="/mentors">Mentors</HeaderNavLink>
           </li>
         </HeaderNavigationMenu>
       </nav>

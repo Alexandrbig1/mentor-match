@@ -8,4 +8,5 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  gap: 4.8rem;
 `;

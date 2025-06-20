@@ -13,6 +13,7 @@ export const RouterConfig = (): RouteObject[] =>
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="mentors" element={<Mentors />} />
+      <Route path="task" element={<Todo />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>
   );

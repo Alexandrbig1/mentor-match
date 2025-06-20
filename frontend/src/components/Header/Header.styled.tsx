@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
+import { primaryFont } from "../fonts";
 
 export const HeaderContainer = styled.header`
   background-color: ${(p) => p.theme.colors.mainBgColor};
@@ -24,6 +26,54 @@ export const HeaderNavigationMenu = styled.ul`
   gap: 1.2rem;
 `;
 
+export const HeaderNavLink = styled(NavLink)`
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: ${primaryFont};
+  color: ${({ theme }) => theme.colors.lightTextColor};
+  line-height: 1.28571;
+  transition: all var(--primary-transition);
+  padding-bottom: 0.4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.2rem;
+    left: 50%;
+    bottom: 0;
+    background-color: ${({ theme }) => theme.colors.lightTextColor};
+    transition: all var(--primary-transition);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.2rem;
+    left: 50%;
+    bottom: 0;
+    background-color: ${({ theme }) => theme.colors.lightTextColor};
+    transition: all var(--primary-transition);
+  }
+
+  &:hover {
+    &::before {
+      width: 50%;
+    }
+
+    &::after {
+      width: 50%;
+      left: 0;
+    }
+  }
+
+  &.active {
+    color: ${({ theme }) => theme.colors.secondaryTextColor};
+  }
+`;
+
 export const HeaderMentorButtonThemeWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -32,7 +82,7 @@ export const HeaderMentorButtonThemeWrapper = styled.div`
 
 export const HeaderMentorButtonIcon = styled(IoIosArrowForward)`
   font-size: 1.6rem;
-  color: ${(p) => p.theme.colors.mainTextColor};
+  color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
   transition: transform var(--linear-transition);
   transform: translateX(0);
 `;
@@ -43,8 +93,8 @@ export const HeaderMentorButton = styled.button`
   background: none;
   padding: 1.4rem 2.4rem;
   border-radius: 1.2rem;
-  background-color: ${(p) => p.theme.colors.ButtonAccentColor};
-  color: ${(p) => p.theme.colors.mainTextColor};
+  background-color: ${(p) => p.theme.colors.headerButtonBgAccentColor};
+  color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
   width: 100%;
   min-width: 18rem;
 

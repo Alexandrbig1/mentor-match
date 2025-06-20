@@ -5,7 +5,7 @@ export const StatsWrapper = styled.section`
   width: 100%;
   max-width: 80%;
   border-radius: 1.2rem;
-  border: 1px dashed #ccc;
+  border: 1px dashed ${(p) => p.theme.colors.heroBgLightGreyColor};
 `;
 
 export const StatsMenu = styled.ul`
@@ -16,5 +16,5 @@ export const StatsMenu = styled.ul`
 export const StatsMenuItem = styled.li`
   display: flex;
   align-items: center;
-  background-color: pink;
+  flex: 1;
 `;

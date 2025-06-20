@@ -6,13 +6,12 @@ export const ThemeSwitcherButton = styled.button``;
 export const IconClickLight = styled(TbSunHigh)`
   color: ${(p) => p.theme.colors.mainTextColor};
   font-size: 3.6rem;
-  transition: 0.3s;
+  transition: all var(--linear-transition);
   padding: 0.6rem;
   border-radius: 50%;
 
   &:hover {
-    /* background-color: ${(p) => p.theme.colors.switcherHoverBg}; */
-    background-color: aliceblue;
+    background-color: ${(p) => p.theme.colors.switcherHoverBg};
   }
 `;
 
