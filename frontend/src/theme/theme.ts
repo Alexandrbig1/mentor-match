@@ -18,6 +18,7 @@ export const theme = {
       linkColor: "#37A4FE",
       switcherHoverBg: "#ced4da60",
       heroBgLightGreyColor: "#f1f3f5",
+      statsIconBgColorLight: "#FDB34930",
     },
   },
   dark: {
@@ -39,6 +40,7 @@ export const theme = {
       linkColor: "#37A4FE",
       switcherHoverBg: "#e9ecef60",
       heroBgLightGreyColor: "#f1f3f5",
+      statsIconBgColorLight: "#FDB34930",
     },
   },
 };

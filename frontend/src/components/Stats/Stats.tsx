@@ -1,24 +1,39 @@
-import { StatsMenu, StatsMenuItem, StatsWrapper } from "./Stats.styled";
+import {
+  StatsMenu,
+  StatsMenuItem,
+  StatsMenuItemSpanIcon,
+  StatsMenuItemSpanWrapper,
+  StatsMenuItemTitle,
+  StatsWrapper,
+} from "./Stats.styled";
 
 export default function Stats() {
   return (
     <StatsWrapper>
       <StatsMenu>
         <StatsMenuItem>
-          <span>Stat 1</span>
-          <h2>Value 1</h2>
+          <StatsMenuItemSpanWrapper>
+            <StatsMenuItemSpanIcon>
+              <use href="/public/sprite.svg#icon-app-settings"></use>
+            </StatsMenuItemSpanIcon>
+          </StatsMenuItemSpanWrapper>
+          <StatsMenuItemTitle>Cross-platform</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <span>Stat 2</span>
-          <h2>Value 2</h2>
+          <StatsMenuItemSpanWrapper>
+            <StatsMenuItemSpanIcon>
+              <use href="/public/sprite.svg#icon-shield"></use>
+            </StatsMenuItemSpanIcon>
+          </StatsMenuItemSpanWrapper>
+          <StatsMenuItemTitle>Secure data</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <span>Stat 3</span>
-          <h2>Value 3</h2>
+          <StatsMenuItemSpanWrapper>10</StatsMenuItemSpanWrapper>
+          <StatsMenuItemTitle>Expert Mentors</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <span>Stat 4</span>
-          <h2>Value 4</h2>
+          <StatsMenuItemSpanWrapper>120</StatsMenuItemSpanWrapper>
+          <StatsMenuItemTitle>Subjects taught</StatsMenuItemTitle>
         </StatsMenuItem>
       </StatsMenu>
     </StatsWrapper>
