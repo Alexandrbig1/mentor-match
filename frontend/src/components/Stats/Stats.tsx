@@ -2,7 +2,7 @@ import {
   StatsMenu,
   StatsMenuItem,
   StatsMenuItemSpanIcon,
-  StatsMenuItemSpanWrapper,
+  StatsMenuItemSpan,
   StatsMenuItemTitle,
   StatsWrapper,
 } from "./Stats.styled";
@@ -12,27 +12,27 @@ export default function Stats() {
     <StatsWrapper>
       <StatsMenu>
         <StatsMenuItem>
-          <StatsMenuItemSpanWrapper>
+          <StatsMenuItemSpan>
             <StatsMenuItemSpanIcon>
-              <use href="/public/sprite.svg#icon-app-settings"></use>
+              <use href="/sprite.svg#icon-app-settings"></use>
             </StatsMenuItemSpanIcon>
-          </StatsMenuItemSpanWrapper>
+          </StatsMenuItemSpan>
           <StatsMenuItemTitle>Cross-platform</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <StatsMenuItemSpanWrapper>
+          <StatsMenuItemSpan>
             <StatsMenuItemSpanIcon>
-              <use href="/public/sprite.svg#icon-shield"></use>
+              <use href="/sprite.svg#icon-shield"></use>
             </StatsMenuItemSpanIcon>
-          </StatsMenuItemSpanWrapper>
+          </StatsMenuItemSpan>
           <StatsMenuItemTitle>Secure data</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <StatsMenuItemSpanWrapper>10</StatsMenuItemSpanWrapper>
+          <StatsMenuItemSpan>10</StatsMenuItemSpan>
           <StatsMenuItemTitle>Expert Mentors</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
-          <StatsMenuItemSpanWrapper>120</StatsMenuItemSpanWrapper>
+          <StatsMenuItemSpan>120</StatsMenuItemSpan>
           <StatsMenuItemTitle>Subjects taught</StatsMenuItemTitle>
         </StatsMenuItem>
       </StatsMenu>

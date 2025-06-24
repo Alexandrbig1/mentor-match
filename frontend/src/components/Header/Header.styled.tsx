@@ -103,6 +103,7 @@ export const HeaderMentorButton = styled.button`
   gap: 0.2rem;
 
   &:hover {
+    background-color: ${(p) => p.theme.colors.headerButtonBgAccentColorHover};
     ${HeaderMentorButtonIcon} {
       transform: translateX(0.4rem) scale(1.2);
     }

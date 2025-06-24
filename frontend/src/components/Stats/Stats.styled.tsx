@@ -9,11 +9,16 @@ export const StatsWrapper = styled.section`
 `;
 
 export const StatsMenu = styled.ul`
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1.2rem;
-  border-radius: 1.2rem;
-  border: 1px dashed ${(p) => p.theme.colors.statsIconBgColorLight};
+  border-radius: 2.4rem;
+  background: linear-gradient(
+    145deg,
+    ${(p) => p.theme.colors.statsBoxShadowColor},
+    ${(p) => p.theme.colors.statsBoxShadowColor}
+  );
 `;
 
 export const StatsMenuItem = styled.li`
@@ -26,7 +31,7 @@ export const StatsMenuItem = styled.li`
   padding: 1.2rem;
 `;
 
-export const StatsMenuItemSpanWrapper = styled.span`
+export const StatsMenuItemSpan = styled.span`
   width: 7.2rem;
   height: 7.2rem;
   border-radius: 50rem;
@@ -34,6 +39,12 @@ export const StatsMenuItemSpanWrapper = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-family: ${primaryFont};
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: ${(p) => p.theme.colors.statsNumberColor};
 `;
 
 export const StatsMenuItemTitle = styled.h3`
