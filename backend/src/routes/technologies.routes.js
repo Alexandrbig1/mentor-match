@@ -5,4 +5,6 @@ const technologiesRouter = express.Router();
 
 technologiesRouter.get("/", technologiesController.getAllTechnologies);
 
+technologiesRouter.get("/count", technologiesController.getTechnologiesCount);
+
 export default technologiesRouter;

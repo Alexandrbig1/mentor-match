@@ -33,7 +33,13 @@ const getMentorById = async (req, res) => {
   res.json(mentorsById);
 };
 
+const getMentorsCount = async (req, res) => {
+  const count = await Mentor.countDocuments();
+  res.json({ count });
+};
+
 export default {
   getAllMentors: ctrlWrapper(getAllMentors),
   getMentorById: ctrlWrapper(getMentorById),
+  getMentorsCount: ctrlWrapper(getMentorsCount),
 };
