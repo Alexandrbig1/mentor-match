@@ -31,6 +31,15 @@ export const StatsMenuItem = styled.li`
   padding: 1.2rem;
 `;
 
+export const StatsMenuItemSpanLoadingWrapper = styled.span`
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const StatsMenuItemSpan = styled.span`
   width: 7.2rem;
   height: 7.2rem;
