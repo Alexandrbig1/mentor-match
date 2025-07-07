@@ -1,5 +1,25 @@
-import { LogoWrapper } from "./Logo.styled";
+import {
+  LogoIcon,
+  LogoIconText,
+  LogoIconTextFirstLetter,
+  LogoIconTextFirstLetterSecond,
+  LogoWrapper,
+} from "./Logo.styled";
 
 export default function Logo() {
-  return <LogoWrapper>Mentor Match</LogoWrapper>;
+  return (
+    <LogoWrapper
+      to="/"
+      aria-label="Mentors Match Home"
+      title="Mentors Match Home"
+    >
+      <LogoIcon>
+        <use href="/sprite.svg#icon-mentor"></use>
+      </LogoIcon>
+      <LogoIconText>
+        <LogoIconTextFirstLetter>M</LogoIconTextFirstLetter>entors
+        <LogoIconTextFirstLetterSecond>M</LogoIconTextFirstLetterSecond>atch
+      </LogoIconText>
+    </LogoWrapper>
+  );
 }

@@ -3,6 +3,7 @@ export const theme = {
     colors: {
       mainBgColor: "#fdfffc",
       mainTextColor: "#02040f",
+      blackTextColor: "#02040f",
       secondaryTextColor: "#001524",
       lightTextColor: "#868e96",
       buttonTextColor: "#f8f9fa",
@@ -33,6 +34,7 @@ export const theme = {
     colors: {
       mainBgColor: "#003049",
       mainTextColor: "#fdfffc",
+      blackTextColor: "#02040f",
       secondaryTextColor: "#f8f9fa",
       lightTextColor: "#868e96",
       buttonTextColor: "#f8f9fa",
