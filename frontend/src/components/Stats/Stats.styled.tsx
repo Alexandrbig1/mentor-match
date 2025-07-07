@@ -54,6 +54,10 @@ export const StatsMenuItemSpan = styled.span`
   font-size: 3.2rem;
   line-height: 1.15;
   color: ${(p) => p.theme.colors.statsNumberColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionNeutralBgColor};
+  }
 `;
 
 export const StatsMenuItemTitle = styled.h3`
@@ -62,10 +66,15 @@ export const StatsMenuItemTitle = styled.h3`
   font-size: 1.6rem;
   line-height: 1.15;
   color: ${(p) => p.theme.colors.mainTextColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionBgColor};
+  }
 `;
 
 export const StatsMenuItemSpanIcon = styled.svg`
   width: 4.8rem;
   height: 4.8rem;
   fill: ${(p) => p.theme.colors.headerButtonBgAccentColor};
+  user-select: none;
 `;

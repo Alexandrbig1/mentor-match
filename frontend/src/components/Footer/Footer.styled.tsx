@@ -28,12 +28,33 @@ export const FooterText = styled.p`
   font-size: 1.4rem;
   line-height: 1.33333;
   color: ${(p) => p.theme.colors.lightTextColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
 `;
 
 export const FooterTextLinkIcon = styled(FaExternalLinkAlt)`
   font-size: 1.4rem;
   color: ${(p) => p.theme.colors.lightTextColor};
   transition: all var(--primary-transition);
+`;
+
+export const FooterTextLinkText = styled.span`
+  position: relative;
+
+  &::before {
+    transition: all var(--primary-transition);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem;
+    width: 0;
+    height: 0.1rem;
+    background-color: ${(p) => p.theme.colors.linkColor};
+    background-color: ${(p) => p.theme.colors.lightTextColor};
+    border-radius: 20rem;
+  }
 `;
 
 export const FooterTextLink = styled.a`
@@ -45,6 +66,9 @@ export const FooterTextLink = styled.a`
   &:hover {
     ${FooterTextLinkIcon} {
       color: ${(p) => p.theme.colors.linkColor};
+    }
+    ${FooterTextLinkText}:before {
+      width: 100%;
     }
   }
 `;

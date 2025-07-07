@@ -24,6 +24,9 @@ export const theme = {
       statsNumberColor: "#49a078",
       statsBgColor: "#fefcfb",
       statsBoxShadowColor: "#edf2fb55",
+      selectionBgColor: "#caf0f8",
+      selectionNeutralBgColor: "#dad7cd",
+      selectionLightBgColor: "#caf0f870",
     },
   },
   dark: {
@@ -51,6 +54,9 @@ export const theme = {
       statsNumberColor: "#7BC37C",
       statsBgColor: "#022b3a",
       statsBoxShadowColor: "#14213d30",
+      selectionBgColor: "#3f37c9",
+      selectionNeutralBgColor: "#3a0ca3",
+      selectionLightBgColor: "#3f37c970",
     },
   },
 };

@@ -30,6 +30,10 @@ export const HeroTitle = styled.h1`
   line-height: 1.15;
   text-transform: uppercase;
   color: ${(p) => p.theme.colors.mainTextColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionBgColor};
+  }
 `;
 
 export const HeroText = styled.p`
@@ -38,6 +42,10 @@ export const HeroText = styled.p`
   font-size: 1.6rem;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
 `;
 
 export const HeroButtonWrapper = styled.div`
@@ -62,6 +70,10 @@ export const HeroButton = styled.button`
   cursor: pointer;
   transition: background-color var(--primary-transition);
 
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+
   &:hover {
     background-color: ${(p) => p.theme.colors.buttonBgHoverColor};
   }
@@ -70,10 +82,12 @@ export const HeroButton = styled.button`
 export const HeroButtonIcon = styled(FaFly)`
   font-size: 2.4rem;
   color: ${(p) => p.theme.colors.buttonTextColor};
+  user-select: none;
 `;
 
 export const HeroImgWrapper = styled.div`
   width: 55%;
+  user-select: none;
 `;
 
 export const HeroImg = styled.img`

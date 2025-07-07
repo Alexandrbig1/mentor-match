@@ -5,6 +5,7 @@ import {
   FooterTextLinkIcon,
   FooterTextWrapper,
   FooterWrapper,
+  FooterTextLinkText,
 } from "./Footer.styled";
 
 function Footer() {
@@ -13,8 +14,12 @@ function Footer() {
       <FooterTextWrapper>
         <FooterText>
           all rights reserved © 2025 MentorMatch by{" "}
-          <FooterTextLink href="https://www.alexsmagin.dev">
-            Alex Smagin
+          <FooterTextLink
+            href="https://www.alexsmagin.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FooterTextLinkText>Alex Smagin</FooterTextLinkText>
             <FooterTextLinkIcon />
           </FooterTextLink>
         </FooterText>

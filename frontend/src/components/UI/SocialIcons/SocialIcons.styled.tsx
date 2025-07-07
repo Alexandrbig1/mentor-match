@@ -11,6 +11,7 @@ export const SocialIconsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  user-select: none;
 `;
 
 export const SocialIconLink = styled.a`
