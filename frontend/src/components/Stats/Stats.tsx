@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CountUp from "react-countup";
 import LoadingSmall from "../UI/LoadingSmall/LoadingSmall";
 import { getMentorsCount } from "../../services/getMentorsCount";
 import { getTechnologiesCount } from "../../services/getTechnologiesCount";
@@ -13,34 +14,43 @@ import {
 } from "./Stats.styled";
 
 export default function Stats() {
-  const [mentorsCount, setMentorsCount] = useState<number>(0);
-  const [technologiesCount, setTechnologiesCount] = useState<number>(0);
+  const [mentorsCount, setMentorsCount] = useState<number | null>(null);
+  const [technologiesCount, setTechnologiesCount] = useState<number | null>(
+    null
+  );
   const [loadingMentors, setLoadingMentors] = useState<boolean>(true);
   const [loadingTechnologies, setLoadingTechnologies] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchMentorsCount = async () => {
+      let count = 0;
       try {
         const response = await getMentorsCount();
+        count = response.count;
+      } catch (error) {
+        console.error("Error fetching mentors count:", error);
+        count = 0;
+      } finally {
         setTimeout(() => {
-          setMentorsCount(response.count);
+          setMentorsCount(count);
           setLoadingMentors(false);
         }, 1200);
-      } catch (error) {
-        console.error("Error fetching mentors count:", error);
-        setLoadingMentors(false);
       }
     };
+
     const fetchTechnologiesCount = async () => {
+      let count = 0;
       try {
         const response = await getTechnologiesCount();
+        count = response.count;
+      } catch (error) {
+        console.error("Error fetching technologies count:", error);
+        count = 0;
+      } finally {
         setTimeout(() => {
-          setTechnologiesCount(response.count);
+          setTechnologiesCount(count);
           setLoadingTechnologies(false);
         }, 1500);
-      } catch (error) {
-        console.error("Error fetching mentors count:", error);
-        setLoadingTechnologies(false);
       }
     };
 
@@ -69,24 +79,24 @@ export default function Stats() {
         </StatsMenuItem>
         <StatsMenuItem>
           <StatsMenuItemSpan>
-            {loadingMentors ? (
+            {loadingMentors || mentorsCount === null ? (
               <StatsMenuItemSpanLoadingWrapper>
                 <LoadingSmall />
               </StatsMenuItemSpanLoadingWrapper>
             ) : (
-              mentorsCount
+              <CountUp end={mentorsCount} duration={1.2} />
             )}
           </StatsMenuItemSpan>
           <StatsMenuItemTitle>Expert Mentors</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
           <StatsMenuItemSpan>
-            {loadingTechnologies ? (
+            {loadingTechnologies || technologiesCount === null ? (
               <StatsMenuItemSpanLoadingWrapper>
                 <LoadingSmall />
               </StatsMenuItemSpanLoadingWrapper>
             ) : (
-              technologiesCount
+              <CountUp end={technologiesCount} duration={1.5} />
             )}
           </StatsMenuItemSpan>
           <StatsMenuItemTitle>Subjects taught</StatsMenuItemTitle>
