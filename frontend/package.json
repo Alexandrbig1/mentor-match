@@ -30,6 +30,7 @@
     "react-helmet-async": "^2.0.5",
     "react-loader-spinner": "^6.1.6",
     "react-router-dom": "^7.6.2",
+    "react-spinners": "^0.17.0",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
