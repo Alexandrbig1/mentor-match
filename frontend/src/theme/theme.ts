@@ -28,6 +28,10 @@ export const theme = {
       selectionBgColor: "#caf0f8",
       selectionNeutralBgColor: "#dad7cd",
       selectionLightBgColor: "#caf0f870",
+      technologyBgColor: "#edf2fb",
+      scrollbarBgColor: "#f0f0f0",
+      scrollbarColor: "#B6E0F760",
+      errorColor: "#dd0426",
     },
   },
   dark: {
@@ -59,6 +63,10 @@ export const theme = {
       selectionBgColor: "#3f37c9",
       selectionNeutralBgColor: "#3a0ca3",
       selectionLightBgColor: "#3f37c970",
+      technologyBgColor: "#274c77",
+      scrollbarBgColor: "#14213d",
+      scrollbarColor: "#003554",
+      errorColor: "#dd0426",
     },
   },
 };

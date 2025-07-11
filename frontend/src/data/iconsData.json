@@ -1,0 +1,81 @@
+[
+  { "iconId": "React", "iconColor": "#61dafb", "iconHoverColor": "#21a1f3" },
+  {
+    "iconId": "TypeScript",
+    "iconColor": "#3178c6",
+    "iconHoverColor": "#235a97"
+  },
+  {
+    "iconId": "JavaScript",
+    "iconColor": "#f7df1e",
+    "iconHoverColor": "#ffe066"
+  },
+  { "iconId": "CSS", "iconColor": "#2965f1", "iconHoverColor": "#174ea6" },
+  { "iconId": "Tailwind", "iconColor": "#38bdf8", "iconHoverColor": "#0ea5e9" },
+  { "iconId": "Next.js", "iconColor": "#6c757d", "iconHoverColor": "#495057" },
+  { "iconId": "Node.js", "iconColor": "#3c873a", "iconHoverColor": "#68a063" },
+  { "iconId": "Express", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  { "iconId": "MongoDB", "iconColor": "#47a248", "iconHoverColor": "#2e7031" },
+  { "iconId": "AWS", "iconColor": "#ff9900", "iconHoverColor": "#e47911" },
+  { "iconId": "Docker", "iconColor": "#2496ed", "iconHoverColor": "#1177b8" },
+  {
+    "iconId": "Kubernetes",
+    "iconColor": "#326ce5",
+    "iconHoverColor": "#174ea6"
+  },
+  {
+    "iconId": "Terraform",
+    "iconColor": "#5f43e9",
+    "iconHoverColor": "#4431b5"
+  },
+  { "iconId": "CI/CD", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  { "iconId": "Linux", "iconColor": "#fcc624", "iconHoverColor": "#888" },
+  {
+    "iconId": "GitHub Actions",
+    "iconColor": "#888",
+    "iconHoverColor": "#0366d6"
+  },
+  {
+    "iconId": "PostgreSQL",
+    "iconColor": "#336791",
+    "iconHoverColor": "#1c3e57"
+  },
+  { "iconId": "GraphQL", "iconColor": "#e10098", "iconHoverColor": "#ad006e" },
+  { "iconId": "Redis", "iconColor": "#d82c20", "iconHoverColor": "#a41e12" },
+  {
+    "iconId": "Microservices",
+    "iconColor": "#bdbdbd",
+    "iconHoverColor": "#888"
+  },
+  { "iconId": "Agile", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  { "iconId": "Scrum", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  { "iconId": "JIRA", "iconColor": "#0052cc", "iconHoverColor": "#2684ff" },
+  {
+    "iconId": "DevOps",
+    "iconColor": "#bdbdbd",
+    "iconHoverColor": "#888"
+  },
+  { "iconId": "HTML", "iconColor": "#e34c26", "iconHoverColor": "#f06529" },
+  { "iconId": "Figma", "iconColor": "#a259ff", "iconHoverColor": "#f24e1e" },
+  { "iconId": "Python", "iconColor": "#3776ab", "iconHoverColor": "#ffd43b" },
+  { "iconId": "Pandas", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  { "iconId": "NumPy", "iconColor": "#96a08c", "iconHoverColor": "#888" },
+  { "iconId": "SQL", "iconColor": "#bdbdbd", "iconHoverColor": "#888" },
+  {
+    "iconId": "Machine Learning",
+    "iconColor": "#bdbdbd",
+    "iconHoverColor": "#888"
+  },
+  { "iconId": "Bash", "iconColor": "#4eaa25", "iconHoverColor": "#888" },
+  { "iconId": "Git", "iconColor": "#f05032", "iconHoverColor": "#d73a49" },
+  {
+    "iconId": "Styled Components",
+    "iconColor": "#db7093",
+    "iconHoverColor": "#ff69b4"
+  },
+  {
+    "iconId": "Framer Motion",
+    "iconColor": "#61dafb",
+    "iconHoverColor": "#21a1f3"
+  }
+]

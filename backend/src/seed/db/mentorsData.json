@@ -8,7 +8,8 @@
       "JavaScript",
       "CSS",
       "Tailwind",
-      "Next.js"
+      "Next.js",
+      "Framer Motion"
     ],
     "phone": "+13125550123",
     "email": "alice.johnson@example.com",
@@ -31,7 +32,8 @@
       "Express",
       "MongoDB",
       "JavaScript",
-      "TypeScript"
+      "TypeScript",
+      "Styled Components"
     ],
     "phone": "+13125550456",
     "email": "brian.kim@example.com",
@@ -97,14 +99,7 @@
   {
     "name": "Emma Patel",
     "position": "Software Engineering Manager",
-    "technologies": [
-      "Agile",
-      "Scrum",
-      "Project Management",
-      "Team Leadership",
-      "JIRA",
-      "DevOps Concepts"
-    ],
+    "technologies": ["Agile", "Scrum", "JIRA", "DevOps", "git"],
     "phone": "+13125550321",
     "email": "emma.patel@example.com",
     "location": "Chicago, IL",
@@ -120,15 +115,7 @@
   {
     "name": "Samantha Torres",
     "position": "Frontend Developer",
-    "technologies": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React",
-      "Accessibility (a11y)",
-      "Figma",
-      "Responsive Design"
-    ],
+    "technologies": ["HTML", "CSS", "JavaScript", "React", "Figma"],
     "phone": "+13125550111",
     "email": "samantha.torres@example.com",
     "location": "Aurora, IL",
@@ -168,16 +155,7 @@
   {
     "name": "Aaliyah Morgan",
     "position": "Data Scientist",
-    "technologies": [
-      "Python",
-      "Pandas",
-      "NumPy",
-      "Scikit-learn",
-      "TensorFlow",
-      "SQL",
-      "Data Visualization",
-      "Machine Learning"
-    ],
+    "technologies": ["Python", "Pandas", "NumPy", "SQL", "Machine Learning"],
     "phone": "+13129990456",
     "email": "aaliyah.morgan@example.com",
     "location": "Chicago, IL",
@@ -193,15 +171,7 @@
   {
     "name": "Jorge Fernandez",
     "position": "Backend Developer",
-    "technologies": [
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "PostgreSQL",
-      "REST APIs",
-      "Redis",
-      "Unit Testing"
-    ],
+    "technologies": ["Node.js", "Express", "MongoDB", "PostgreSQL", "Redis"],
     "phone": "+13129884567",
     "email": "jorge.fernandez@example.com",
     "location": "Naperville, IL",
@@ -223,8 +193,7 @@
       "AWS",
       "Terraform",
       "CI/CD",
-      "Bash",
-      "Monitoring (Prometheus, Grafana)"
+      "Bash"
     ],
     "phone": "+13124447890",
     "email": "natalie.brooks@example.com",
