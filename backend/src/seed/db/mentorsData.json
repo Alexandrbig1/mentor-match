@@ -14,12 +14,12 @@
     "phone": "+13125550123",
     "email": "alice.johnson@example.com",
     "location": "Evanston, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/alicejohnson",
-      "website": "https://alicejohnson.dev",
-      "portfolio": "https://portfolio.alicejohnson.dev",
-      "facebook": "https://facebook.com/alicejohnson"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/alicejohnson" },
+      { "platform": "website", "url": "https://alicejohnson.dev" },
+      { "platform": "portfolio", "url": "https://portfolio.alicejohnson.dev" },
+      { "platform": "facebook", "url": "https://facebook.com/alicejohnson" }
+    ],
     "coreValues": ["Integrity", "Continuous Learning", "Collaboration"],
     "description": "Experienced React developer passionate about mentoring junior developers in UI/UX best practices."
   },
@@ -38,12 +38,12 @@
     "phone": "+13125550456",
     "email": "brian.kim@example.com",
     "location": "Naperville, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/briankim",
-      "website": "https://briank.dev",
-      "portfolio": "https://portfolio.briank.dev",
-      "facebook": "https://facebook.com/briankim"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/briankim" },
+      { "platform": "website", "url": "https://briank.dev" },
+      { "platform": "portfolio", "url": "https://portfolio.briank.dev" },
+      { "platform": "facebook", "url": "https://facebook.com/briankim" }
+    ],
     "coreValues": ["Empathy", "Discipline", "Problem Solving"],
     "description": "Mentor focused on helping developers bridge the frontend-backend gap using modern tools like Node.js and MongoDB."
   },
@@ -62,12 +62,12 @@
     "phone": "+13125550789",
     "email": "cynthia.lee@example.com",
     "location": "Schaumburg, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/cynthialee",
-      "website": "https://cynthialee.io",
-      "portfolio": "https://portfolio.cynthialee.io",
-      "facebook": "https://facebook.com/cynthialee"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/cynthialee" },
+      { "platform": "website", "url": "https://cynthialee.io" },
+      { "platform": "portfolio", "url": "https://portfolio.cynthialee.io" },
+      { "platform": "facebook", "url": "https://facebook.com/cynthialee" }
+    ],
     "coreValues": ["Ownership", "Automation", "Efficiency"],
     "description": "DevOps specialist who loves teaching CI/CD, cloud deployment, and system reliability engineering to aspiring engineers."
   },
@@ -87,12 +87,12 @@
     "phone": "+13125550987",
     "email": "david.ramirez@example.com",
     "location": "Oak Park, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/davidramirez",
-      "website": "https://davidcodes.com",
-      "portfolio": "https://portfolio.davidcodes.com",
-      "facebook": "https://facebook.com/davidramirez"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/davidramirez" },
+      { "platform": "website", "url": "https://davidcodes.com" },
+      { "platform": "portfolio", "url": "https://portfolio.davidcodes.com" },
+      { "platform": "facebook", "url": "https://facebook.com/davidramirez" }
+    ],
     "coreValues": ["Precision", "Mentorship", "Security"],
     "description": "Loves working with APIs and databases, and helps junior devs master backend architecture and best practices."
   },
@@ -103,12 +103,12 @@
     "phone": "+13125550321",
     "email": "emma.patel@example.com",
     "location": "Chicago, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/emmapatel",
-      "website": "https://emmapatel.dev",
-      "portfolio": "https://portfolio.emmapatel.dev",
-      "facebook": "https://facebook.com/emmapatel"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/emmapatel" },
+      { "platform": "website", "url": "https://emmapatel.dev" },
+      { "platform": "portfolio", "url": "https://portfolio.emmapatel.dev" },
+      { "platform": "facebook", "url": "https://facebook.com/emmapatel" }
+    ],
     "coreValues": ["Leadership", "Empowerment", "Diversity"],
     "description": "Manager with a passion for helping engineers grow their careers through mentorship and goal setting."
   },
@@ -119,12 +119,18 @@
     "phone": "+13125550111",
     "email": "samantha.torres@example.com",
     "location": "Aurora, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/samanthatorres",
-      "website": "https://samanthadev.dev",
-      "portfolio": "https://portfolio.samanthatorres.dev",
-      "facebook": "https://facebook.com/samantha.codes"
-    },
+    "socialLinks": [
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/samanthatorres"
+      },
+      { "platform": "website", "url": "https://samanthadev.dev" },
+      {
+        "platform": "portfolio",
+        "url": "https://portfolio.samanthatorres.dev"
+      },
+      { "platform": "facebook", "url": "https://facebook.com/samantha.codes" }
+    ],
     "coreValues": ["Collaboration", "Accessibility", "Continuous Learning"],
     "description": "Passionate about crafting accessible, user-friendly web interfaces. Always learning and eager to mentor others starting their frontend journey."
   },
@@ -143,12 +149,12 @@
     "phone": "+17736540988",
     "email": "daniel.choi@example.com",
     "location": "Skokie, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/danielchoi",
-      "website": "https://danielchoi.dev",
-      "portfolio": "https://portfolio.danielchoi.dev",
-      "facebook": "https://facebook.com/danielchoi.dev"
-    },
+    "socialLinks": [
+      { "platform": "linkedin", "url": "https://linkedin.com/in/danielchoi" },
+      { "platform": "website", "url": "https://danielchoi.dev" },
+      { "platform": "portfolio", "url": "https://portfolio.danielchoi.dev" },
+      { "platform": "facebook", "url": "https://facebook.com/danielchoi.dev" }
+    ],
     "coreValues": ["Efficiency", "Integrity", "Mentorship"],
     "description": "Software engineer with a love for elegant code and helping others grow. Experienced in Node.js, React, and cloud technologies."
   },
@@ -159,12 +165,15 @@
     "phone": "+13129990456",
     "email": "aaliyah.morgan@example.com",
     "location": "Chicago, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/aaliyahmorgan",
-      "website": "https://aaliyahmorgan.ai",
-      "portfolio": "https://portfolio.aaliyahmorgan.dev",
-      "facebook": "https://facebook.com/aaliyah.datasci"
-    },
+    "socialLinks": [
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/aaliyahmorgan"
+      },
+      { "platform": "website", "url": "https://aaliyahmorgan.ai" },
+      { "platform": "portfolio", "url": "https://portfolio.aaliyahmorgan.dev" },
+      { "platform": "facebook", "url": "https://facebook.com/aaliyah.datasci" }
+    ],
     "coreValues": ["Curiosity", "Empathy", "Impact"],
     "description": "Data scientist focused on uncovering insights and telling stories with data. Loves teaching Python, ML, and helping others get into data science."
   },
@@ -175,12 +184,18 @@
     "phone": "+13129884567",
     "email": "jorge.fernandez@example.com",
     "location": "Naperville, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/jorgefernandez",
-      "website": "https://jorgecodes.dev",
-      "portfolio": "https://portfolio.jorge.dev",
-      "facebook": "https://facebook.com/jorge.fernandez.dev"
-    },
+    "socialLinks": [
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/jorgefernandez"
+      },
+      { "platform": "website", "url": "https://jorgecodes.dev" },
+      { "platform": "portfolio", "url": "https://portfolio.jorge.dev" },
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/jorge.fernandez.dev"
+      }
+    ],
     "coreValues": ["Resilience", "Clean Code", "Performance"],
     "description": "Backend specialist with deep experience in Express and MongoDB. Big advocate for clean architecture and performance-driven development."
   },
@@ -198,12 +213,24 @@
     "phone": "+13124447890",
     "email": "natalie.brooks@example.com",
     "location": "Evanston, IL",
-    "socialLinks": {
-      "linkedin": "https://linkedin.com/in/nataliebrooks",
-      "website": "https://nataliebrooks.devops",
-      "portfolio": "https://portfolio.natalieb.dev",
-      "facebook": "https://facebook.com/natalie.devops"
-    },
+    "socialLinks": [
+      {
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/nataliebrooks"
+      },
+      {
+        "platform": "website",
+        "url": "https://nataliebrooks.devops"
+      },
+      {
+        "platform": "portfolio",
+        "url": "https://portfolio.natalieb.dev"
+      },
+      {
+        "platform": "facebook",
+        "url": "https://facebook.com/natalie.devops"
+      }
+    ],
     "coreValues": ["Automation", "Accountability", "Teamwork"],
     "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
   }
