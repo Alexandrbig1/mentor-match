@@ -32,6 +32,8 @@ export const theme = {
       scrollbarBgColor: "#f0f0f0",
       scrollbarColor: "#B6E0F760",
       errorColor: "#dd0426",
+      linkTextColor: "#5740f7",
+      linkTextHoverColor: "#4633c6",
     },
   },
   dark: {
@@ -67,6 +69,8 @@ export const theme = {
       scrollbarBgColor: "#14213d",
       scrollbarColor: "#003554",
       errorColor: "#dd0426",
+      linkTextColor: "#a568fc",
+      linkTextHoverColor: "#b786fd",
     },
   },
 };
