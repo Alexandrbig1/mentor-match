@@ -1,3 +1,7 @@
 export default function PageNotFound() {
-  return <div>404 Page not found</div>;
+  return (
+    <div>
+      <img src="/icons/page-not-found.svg" alt="Page not found" />
+    </div>
+  );
 }
