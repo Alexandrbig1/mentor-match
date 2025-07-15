@@ -27,13 +27,10 @@ export const MentorsMenu = styled.ul`
   display: flex;
   flex-wrap: wrap;
   gap: 1.2rem;
+  position: relative;
 `;
 
-export const MentorListErrorItem = styled.li`
-  align-self: center;
-  color: ${(p) => p.theme.colors.errorColor};
-  font-size: 1.6rem;
-  font-weight: 500;
+export const MentorListLoadingItem = styled.li`
   text-align: center;
   width: 100%;
   margin-top: 7.2rem;

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FiSearch } from "react-icons/fi";
-import { IoWarningOutline } from "react-icons/io5";
 import { primaryFont } from "../../../components/fonts";
 
 export const FormWrapper = styled.form`
@@ -81,9 +80,9 @@ export const TechnologyErrorWrapper = styled.div`
   gap: 0.8rem;
 `;
 
-export const TechnologyErrorIcon = styled(IoWarningOutline)`
-  color: ${(p) => p.theme.colors.errorColor};
-  font-size: 2.4rem;
+export const TechnologyErrorIcon = styled.svg`
+  width: 3.6rem;
+  height: 3.6rem;
 `;
 
 export const TechnologyErrorText = styled.p`

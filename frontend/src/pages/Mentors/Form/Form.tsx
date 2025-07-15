@@ -16,21 +16,34 @@ import {
   TechnologyErrorText,
   TechnologyErrorWrapper,
 } from "./Form.styled";
+import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
+import { div } from "framer-motion/client";
 
 export default function Form() {
   const [technologies, setTechnologies] = useState<string[]>([]);
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    setLoading(true);
     const fetchTechnologies = async () => {
       try {
         const techs = await getAllTechnologies();
         setTechnologies(techs);
+        if (techs.length === 0) {
+          setError("No technologies found. Please check back later!");
+        } else {
+          setError(null);
+        }
       } catch (err) {
         setError(
           "Sorry, we couldn't load the list of technologies. Please try again later."
         );
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1200);
       }
     };
     fetchTechnologies();
@@ -57,39 +70,46 @@ export default function Form() {
         <SearchIcon />
       </FormNameWrapper>
       <FormTitle>Technology</FormTitle>
-      {error && (
+      {loading ? (
+        <div>
+          <LoadingSmall message />
+        </div>
+      ) : error ? (
         <TechnologyErrorWrapper>
-          <TechnologyErrorIcon />
+          <TechnologyErrorIcon>
+            <use href="/sprite.svg#icon-db-error"></use>
+          </TechnologyErrorIcon>
           <TechnologyErrorText>{error}</TechnologyErrorText>
         </TechnologyErrorWrapper>
+      ) : (
+        <FormTechnologyWrapper>
+          {technologies?.map((technology) => {
+            const { IconComponent, color, hoverColor } =
+              getTechIconProps(technology);
+            return (
+              <FormTechnologyLabel
+                key={technology}
+                $color={color}
+                $hoverColor={hoverColor}
+                $checked={selectedTechs.includes(technology)}
+              >
+                <FormTechnologyInput
+                  type="checkbox"
+                  id="expertise"
+                  name="expertise"
+                  value={technology}
+                  checked={selectedTechs.includes(technology)}
+                  onChange={handleCheck}
+                />
+                <FormTechnologyIconWrapper $color={color}>
+                  <IconComponent />
+                </FormTechnologyIconWrapper>
+                <FormTechnologyInputText>{technology}</FormTechnologyInputText>
+              </FormTechnologyLabel>
+            );
+          })}
+        </FormTechnologyWrapper>
       )}
-      <FormTechnologyWrapper>
-        {technologies?.map((technology) => {
-          const { IconComponent, color, hoverColor } =
-            getTechIconProps(technology);
-          return (
-            <FormTechnologyLabel
-              key={technology}
-              $color={color}
-              $hoverColor={hoverColor}
-              $checked={selectedTechs.includes(technology)}
-            >
-              <FormTechnologyInput
-                type="checkbox"
-                id="expertise"
-                name="expertise"
-                value={technology}
-                checked={selectedTechs.includes(technology)}
-                onChange={handleCheck}
-              />
-              <FormTechnologyIconWrapper $color={color}>
-                <IconComponent />
-              </FormTechnologyIconWrapper>
-              <FormTechnologyInputText>{technology}</FormTechnologyInputText>
-            </FormTechnologyLabel>
-          );
-        })}
-      </FormTechnologyWrapper>
     </FormWrapper>
   );
 }
