@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # Frontend (Node.js)
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+
+  # Backend (Node.js)
+  - package-ecosystem: "npm"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
