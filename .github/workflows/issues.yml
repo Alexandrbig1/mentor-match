@@ -1,0 +1,14 @@
+name: Issue Management
+on:
+  issues:
+    types: [opened, edited]
+jobs:
+  manage_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open or Edit Issue
+        if: github.event.action == 'opened' || github.event.action == 'edited'
+        run: |
+          echo "Issue #${{ github.event.issue.number }} has been ${{ github.event.action }}."
+          echo "Title: ${{ github.event.issue.title }}"
+          echo "Body: ${{ github.event.issue.body }}"
