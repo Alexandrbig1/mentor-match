@@ -40,6 +40,7 @@ jobs:
     if: success()
     steps:
       - name: Download build artifacts
+        continue-on-error: true
         uses: actions/download-artifact@v4
         with:
           name: dist-files
