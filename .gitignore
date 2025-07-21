@@ -8,6 +8,7 @@ node_modules/
 
 # Environment variables and sensitive configuration
 .env
+.env.production
 .env.* # in case you use multiple environment files
 
 # Logs

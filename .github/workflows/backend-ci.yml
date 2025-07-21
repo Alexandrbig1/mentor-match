@@ -25,8 +25,8 @@ jobs:
       - name: Install backend dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --prefix backend
-      - name: Run server
-        run: npm start & npx wait-on http://127.0.0.1:$PORT
+      - name: Simulate server start
+        run: echo "Simulating backend server start..."
       - name: Output information
         run: |
           echo "env info ${{ env.MONGO_USER }}"

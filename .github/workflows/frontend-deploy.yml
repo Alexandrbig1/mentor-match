@@ -46,11 +46,11 @@ jobs:
         run: echo "Deploying frontend..."
 
   report:
-    needs: build
+    needs: [build, deploy]
     runs-on: ubuntu-latest
     if: failure()
     steps:
-      - name: Report build failure
+      - name: Report failure
         run: |
-          echo "❌ Build failed! Please check the logs for details."
+          echo "❌ Workflow failed! Check build and deploy logs for details."
           echo ${{ toJSON(github) }}
