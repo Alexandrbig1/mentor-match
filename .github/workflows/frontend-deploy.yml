@@ -15,15 +15,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Cache dependencies
+        id: cache
         uses: actions/cache@v4
         with:
-          path: ~/.npm
+          path: node_modules
           key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
       - name: Install frontend dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --prefix frontend
       - name: Build frontend
+        id: build-frontend
         run: npm run build --prefix frontend
       - name: Upload build artifacts
+        if: failure() && steps.build-frontend.outcome == 'failure'
         uses: actions/upload-artifact@v4
         with:
           name: dist-files
@@ -32,6 +36,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: success()
     steps:
       - name: Download build artifacts
         uses: actions/download-artifact@v4
@@ -39,3 +44,13 @@ jobs:
           name: dist-files
       - name: Deploy frontend
         run: echo "Deploying frontend..."
+
+  report:
+    needs: build
+    runs-on: ubuntu-latest
+    if: failure()
+    steps:
+      - name: Report build failure
+        run: |
+          echo "❌ Build failed! Please check the logs for details."
+          echo ${{ toJSON(github) }}

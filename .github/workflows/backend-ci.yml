@@ -1,0 +1,32 @@
+name: Backend CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types:
+      - opened
+env:
+  PORT: 8080
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      MONGO_USER: ${{ secrets.MONGO_USER }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
+      - name: Install backend dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci --prefix backend
+      - name: Run server
+        run: npm start & npx wait-on http://127.0.0.1:$PORT
+      - name: Output information
+        run: |
+          echo "env info ${{ env.MONGO_USER }}"
