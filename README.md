@@ -2,6 +2,9 @@
 
 <img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="100"/>
 
+[![Backend CI](https://github.com/Alexandrbig1/mentor-match/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/Alexandrbig1/mentor-match/actions/workflows/backend-ci.yml)
+[![Frontend Deploy](https://github.com/Alexandrbig1/mentor-match/actions/workflows/frontend-deploy.yml/badge.svg)](https://github.com/Alexandrbig1/mentor-match/actions/workflows/frontend-deploy.yml)
+[![Issue Management](https://github.com/Alexandrbig1/mentor-match/actions/workflows/issues.yml/badge.svg)](https://github.com/Alexandrbig1/mentor-match/actions/workflows/issues.yml)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Alexandrbig1/mentor-match)](https://github.com/Alexandrbig1/mentor-match/commits/main)
 [![GitHub license](https://img.shields.io/github/license/Alexandrbig1/mentor-match)](https://github.com/Alexandrbig1/mentor-match/blob/main/LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-Latest-EAD319.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
