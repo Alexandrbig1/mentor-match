@@ -52,7 +52,7 @@ jobs:
   report:
     needs: [build, deploy]
     runs-on: ubuntu-latest
-    if: failure()
+    # if: failure()
     steps:
       - name: Env masked variable
         run: echo "::mask::MY_STEP_SECRET=step_secret" >> $GITHUB_ENV
