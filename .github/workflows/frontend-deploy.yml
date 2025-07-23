@@ -40,7 +40,7 @@ jobs:
     if: success()
     steps:
       - name: Set masked Secret in this job
-        run: echo "::mask::JOB_SECRET" >> GITHUB_ENV
+        run: echo "::add-mask::JOB_SECRET" >> GITHUB_ENV
       - name: Download build artifacts
         continue-on-error: true
         uses: actions/download-artifact@v4
@@ -55,7 +55,7 @@ jobs:
     # if: failure()
     steps:
       - name: Env masked variable
-        run: echo "::mask::MY_STEP_SECRET=step_secret" >> $GITHUB_ENV
+        run: echo "::add-mask::MY_STEP_SECRET=step_secret" >> $GITHUB_ENV
       - name: Show masked Env
         run: |
           echo $MY_STEP_SECRET
