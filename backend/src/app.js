@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import mentorRouter from "./routes/mentors.routes.js";
 import technologyRouter from "./routes/technologies.routes.js";
@@ -16,6 +17,7 @@ app.use(limiter);
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
+app.use(helmet());
 
 app.use("/api/mentors", mentorRouter);
 
