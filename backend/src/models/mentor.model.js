@@ -45,6 +45,20 @@ const mentorSchema = new Schema(
   }
 );
 
+// mentorSchema.post("save", (doc) => {
+//   console.log("New mentor created:", doc);
+// });
+
+// mentorSchema.post("save", (err, doc, next) => {
+//   if (err) {
+//     err.status = 400;
+//     console.error("Error creating mentor:", err);
+//     return next(err);
+//   }
+//   console.log("New mentor created:", doc);
+//   next();
+// });
+
 const Mentor = model("Mentor", mentorSchema);
 
 export default Mentor;
