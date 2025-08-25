@@ -3,7 +3,7 @@ import HttpError from "../helpers/HttpError.js";
 import Mentor from "../models/mentor.model.js";
 
 const getAllMentors = async (req, res) => {
-  const { name, tech } = req.query;
+  const { name, tech, page = 1, limit = 20 } = req.query;
 
   const filter = {};
 
@@ -17,9 +17,18 @@ const getAllMentors = async (req, res) => {
     filter.technologies = { $all: techArray };
   }
 
-  const mentorsData = await Mentor.find(filter);
+  const mentorsData = await Mentor.find(filter)
+    .skip((page - 1) * limit)
+    .limit(Number(limit));
 
-  res.json(mentorsData);
+  const totalDocs = await Mentor.countDocuments(filter);
+
+  res.json({
+    data: mentorsData,
+    total: totalDocs,
+    page: Number(page),
+    totalPages: Math.ceil(totalDocs / limit),
+  });
 };
 
 const getMentorById = async (req, res) => {
