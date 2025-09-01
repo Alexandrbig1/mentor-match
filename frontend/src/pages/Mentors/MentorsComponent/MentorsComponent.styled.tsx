@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { primaryFont } from "../../../components/fonts";
 
 export const MentorsComponentWrapper = styled.div`
   /* background-color: aliceblue; */
@@ -7,6 +8,11 @@ export const MentorsComponentWrapper = styled.div`
   height: 100%;
   overflow-y: auto;
   padding-right: 0.2rem;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+  gap: 2.4rem;
+
 
   &::-webkit-scrollbar {
     width: 8px;
@@ -54,3 +60,30 @@ export const MentorItemCoreValuesWrapper = styled.div`
   gap: 0.2rem;
   flex-wrap: wrap;
 `;
+
+export const MentorsLoadMoreButton = styled.button`
+  border: none;
+  outline: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-family: ${primaryFont};
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.buttonTextColor};
+  background-color: ${(p) => p.theme.colors.buttonBgColor};
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: background-color var(--primary-transition);
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+
+  &:hover {
+    background-color: ${(p) => p.theme.colors.buttonBgHoverColor};
+  }
+`
