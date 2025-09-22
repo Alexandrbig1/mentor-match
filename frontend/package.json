@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "axios": "^1.9.0",
-    "framer-motion": "^12.18.1",
+    "framer-motion": "^12.23.16",
     "modern-normalize": "^3.0.1",
     "react": "^18.3.1",
     "react-countup": "^6.5.3",
