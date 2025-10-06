@@ -33,7 +33,7 @@
     "morgan": "^1.10.1"
   },
   "devDependencies": {
-    "cross-env": "^10.0.0",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.10"
   }
 }
