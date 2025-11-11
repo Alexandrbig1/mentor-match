@@ -17,7 +17,6 @@ import {
   TechnologyErrorWrapper,
 } from "./Form.styled";
 import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
-import { div } from "framer-motion/client";
 
 export default function Form() {
   const [technologies, setTechnologies] = useState<string[]>([]);

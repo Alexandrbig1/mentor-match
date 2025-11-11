@@ -34,6 +34,7 @@ export const MentorsMenu = styled.ul`
   flex-wrap: wrap;
   gap: 1.2rem;
   position: relative;
+width: 100%;
 `;
 
 export const MentorListLoadingItem = styled.li`
