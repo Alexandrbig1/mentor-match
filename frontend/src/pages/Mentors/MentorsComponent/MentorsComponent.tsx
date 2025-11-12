@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { getAllMentors } from "../../../services/getAllMentors";
+import MentorsItem from "./MentorsItem";
+import ErrorMessage from "../../../components/UI/ErrorMessage/ErrorMessage";
+import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
 import {
   MentorListLoadingItem,
   MentorsComponentWrapper,
   MentorsLoadMoreButton,
   MentorsMenu,
 } from "./MentorsComponent.styled";
-import MentorsItem from "./MentorsItem";
-import ErrorMessage from "../../../components/UI/ErrorMessage/ErrorMessage";
-import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
 
 export default function MentorsComponent() {
   const [mentors, setMentors] = useState<any[]>([]);

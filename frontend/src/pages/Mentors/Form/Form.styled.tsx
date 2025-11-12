@@ -1,6 +1,24 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { FiSearch } from "react-icons/fi";
 import { primaryFont } from "../../../components/fonts";
+
+const searchIconRotate = keyframes`
+  0% {
+    transform: scale(1) translateY(-50%) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.1) translateY(-50%) rotate(15deg);
+  }
+
+
+  75% {
+    transform: scale(1.1) translateY(-50%) rotate(-15deg);
+  }
+
+  100% {
+    transform: scale(1) translateY(-50%) rotate(0deg);
+  }
+`;
 
 export const FormWrapper = styled.form`
   display: flex;
@@ -38,11 +56,16 @@ export const FormNameInput = styled.input`
   padding: 0.8rem;
   padding-left: 3.2rem;
   color: ${(p) => p.theme.colors.secondaryTextColor};
+  transition: all var(--primary-transition);
 
   &::placeholder {
     color: ${(p) => p.theme.colors.lightTextColor};
     font-size: 1.4rem;
     font-family: ${primaryFont};
+  }
+
+  ${FormNameWrapper}:focus-within & {
+    padding-left: 3.6rem;
   }
 `;
 
@@ -52,6 +75,11 @@ export const SearchIcon = styled(FiSearch)`
   left: 0.8rem;
   transform: translateY(-50%);
   color: ${(p) => p.theme.colors.mainTextColor};
+  transition: all var(--primary-transition);
+
+  ${FormNameWrapper}:hover & {
+    animation: ${searchIconRotate} 1.2s ease-in-out;
+  }
 `;
 
 export const FormTechnologyWrapper = styled.div`
