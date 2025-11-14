@@ -12,7 +12,6 @@ export const MentorsComponentWrapper = styled.div`
   align-items: center;
   gap: 2.4rem;
 
-
   &::-webkit-scrollbar {
     width: 8px;
   }
@@ -33,7 +32,7 @@ export const MentorsMenu = styled.ul`
   flex-wrap: wrap;
   gap: 1.2rem;
   position: relative;
-width: 100%;
+  width: 100%;
 `;
 
 export const MentorListLoadingItem = styled.li`
@@ -76,10 +75,10 @@ export const MentorItemNameWrapper = styled.div`
 `;
 
 export const MentorItemAvatarImage = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 1.2rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1.2rem;
 `;
 
 export const MentorItemDetails = styled.p`
@@ -91,6 +90,44 @@ export const MentorItemDetails = styled.p`
 
   &::selection {
     background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+`;
+
+export const MentorItemDetailsContactWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+`;
+
+export const MentorItemDetailsContact = styled.p`
+  display: inline;
+  width: 100%;
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+  position: relative;
+  transition: all var(--primary-transition);
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    background: #b6cbda;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 260ms ease;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform-origin: left;
+    transform: scaleX(1);
   }
 `;
 
@@ -129,10 +166,27 @@ export const MentorsLoadMoreButton = styled.button`
 `;
 
 export const MentorItemContentWrapper = styled.div`
-display: flex;
-flex-direction: column;
-gap: 1.2rem;
-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+`;
+
+export const MentorItemName = styled.h2`
+  font-family: ${primaryFont};
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+`;
+
+export const MentorItemPosition = styled.h3`
+  font-family: ${primaryFont};
+  font-weight: 400;
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
 `;
 
 export const MentorItemDescription = styled.p`
@@ -148,21 +202,82 @@ export const MentorItemDescription = styled.p`
 `;
 
 export const MentorItemTypesWrapper = styled.div`
-display: flex;
-align-items: center;
-gap: 0.4rem;
-width: 100%;
-flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  flex-wrap: wrap;
 `;
 
-export const MentorItemTypesItems = styled.div`
-display: flex;
-align-items: center;
-gap: 0.4rem;
+export const MentorItemTypesItemsSubTitle = styled.p`
+  font-family: ${primaryFont};
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+
+  &::selection {
+    background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+`
+
+export const MentorItemValuesItemsWrapper = styled.div`
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.6rem;
+  border: 1px solid ${(p) => p.theme.colors.valuesWrapperBorderColor};
+  background-color: ${(p) => p.theme.colors.valuesWrapperBgColor};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+`;
+
+export const MentorItemValuesText = styled.p`
+  font-size: 1.2rem;
+  font-family: ${primaryFont};
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+  font-weight: 400;
+  text-transform: capitalize;
 `;
 
 export const MentorItemSocialIconsWrapper = styled.div`
-display: flex;
-align-items: center;
-gap: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+`;
+
+export const MentorItemTechnologyText = styled.span`
+  font-size: 1.2rem;
+  font-family: ${primaryFont};
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+  font-weight: 400;
+  text-transform: capitalize;
+`;
+
+export const MentorItemTechnologyIconWrapper = styled.span`
+  display: flex;
+  font-size: 2.4rem;
+  color: ${(p) => p?.$color || p.theme.colors.mainTextColor};
+  transition: all var(--primary-transition);
+`;
+
+export const MentorItemTechnologyWrapper = styled.div`
+ position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  gap: 0.8rem;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  /* background-color: ${(p) => p?.theme.colors.technologyWrapperBgColor}; */
+
+
+  &:hover {
+    ${MentorItemTechnologyIconWrapper} {
+      color: ${(p) => p?.$hoverColor || p.theme.colors.mainTextColor};
+    }
+  }
 `;

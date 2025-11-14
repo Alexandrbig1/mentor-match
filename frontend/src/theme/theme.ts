@@ -34,6 +34,9 @@ export const theme = {
       errorColor: "#dd0426",
       linkTextColor: "#5740f7",
       linkTextHoverColor: "#4633c6",
+      valuesWrapperBgColor: "#f0f5f8",
+      valuesWrapperBorderColor: "#bee3f8",
+      technologyWrapperBgColor: "#e5f5fcff",
     },
   },
   dark: {
@@ -71,6 +74,11 @@ export const theme = {
       errorColor: "#dd0426",
       linkTextColor: "#a568fc",
       linkTextHoverColor: "#b786fd",
+      valuesWrapperBgColor: "#084263ff",
+      valuesWrapperBorderColor: "#236489ff",
+      technologyWrapperBgColor: "#0a2c77ff",
+
+
     },
   },
 };

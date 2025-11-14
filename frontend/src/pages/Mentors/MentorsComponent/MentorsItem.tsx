@@ -1,3 +1,4 @@
+import { getTechIconProps } from "../../../utils/getTechIconProps";
 import {
   MentorItemAvatarImage,
   MentorItemAvatarNameWrapper,
@@ -6,11 +7,20 @@ import {
   MentorItemCoreValuesWrapper,
   MentorItemDescription,
   MentorItemDetails,
+  MentorItemDetailsContact,
+  MentorItemDetailsContactWrapper,
+  MentorItemName,
   MentorItemNameWrapper,
+  MentorItemPosition,
   MentorItemSocialIconsWrapper,
-  MentorItemTypesItems,
+  MentorItemTechnologyIconWrapper,
+  MentorItemTechnologyText,
+  MentorItemTechnologyWrapper,
+  MentorItemValuesItemsWrapper,
+  MentorItemTypesItemsSubTitle,
   MentorItemTypesWrapper,
   MentorListItem,
+  MentorItemValuesText,
 } from "./MentorsComponent.styled";
 
 export default function MentorsItem({ mentor }) {
@@ -25,54 +35,67 @@ export default function MentorsItem({ mentor }) {
         </MentorItemAvatarWrapper>
         <MentorItemNameWrapper>
           <div>
-            <h3>{mentor.name}</h3>
-            <p>{mentor.position}</p>
+            <MentorItemName>{mentor.name}</MentorItemName>
+            <MentorItemPosition>{mentor.position}</MentorItemPosition>
           </div>
-          <div>
+          <MentorItemDetailsContactWrapper>
             <MentorItemDetails>{mentor.location}</MentorItemDetails>
             <a
               href={`tel:${mentor.phone}`}
               aria-label={`Call ${mentor.name}`}
               title={`Call ${mentor.name}`}
             >
-              <MentorItemDetails>{mentor.phone}</MentorItemDetails>
+              <MentorItemDetailsContact>
+                {mentor.phone}
+              </MentorItemDetailsContact>
             </a>
             <a
               href={`mailto:${mentor.email}`}
               aria-label={`Email ${mentor.name}`}
               title={`Email ${mentor.name}`}
             >
-              <MentorItemDetails>{mentor.email}</MentorItemDetails>
+              <MentorItemDetailsContact>
+                {mentor.email}
+              </MentorItemDetailsContact>
             </a>
-          </div>
+          </MentorItemDetailsContactWrapper>
         </MentorItemNameWrapper>
       </MentorItemAvatarNameWrapper>
       <MentorItemContentWrapper>
         <MentorItemDescription>{mentor.description}</MentorItemDescription>
         <MentorItemCoreValuesWrapper>
           <MentorItemTypesWrapper>
-            <p>Core Values:</p>
+            <MentorItemTypesItemsSubTitle>
+              Core Values:
+            </MentorItemTypesItemsSubTitle>
             {mentor.coreValues.map((value, index) => (
-              <MentorItemTypesItems key={`${index}-${value}`}>
-                <span></span>
-                <p>
-                  {value}
-                </p>
-              </MentorItemTypesItems>
+              <MentorItemValuesItemsWrapper key={`${index}-${value}`}>
+                <MentorItemValuesText>{value}</MentorItemValuesText>
+              </MentorItemValuesItemsWrapper>
             ))}
           </MentorItemTypesWrapper>
         </MentorItemCoreValuesWrapper>
         <MentorItemCoreValuesWrapper>
           <MentorItemTypesWrapper>
-            <p>Technologies:</p>
-            {mentor.technologies.map((technology, index) => (
-              <MentorItemTypesItems key={`${index}-${technology}`}>
-                <span></span>
-                <p>
-                  {technology}
-                </p>
-              </MentorItemTypesItems>
-            ))}
+            <MentorItemTypesItemsSubTitle>
+              Technologies:
+            </MentorItemTypesItemsSubTitle>
+            {mentor.technologies.map((technology, index) => {
+              const { IconComponent, color, hoverColor } =
+                getTechIconProps(technology);
+              return (
+                <MentorItemTechnologyWrapper
+                  key={`${index}-${technology}`}
+                  $color={color}
+                  $hoverColor={hoverColor}
+                >
+                  <MentorItemTechnologyIconWrapper $color={color}>
+                    <IconComponent />
+                  </MentorItemTechnologyIconWrapper>
+                  <MentorItemTechnologyText>{technology}</MentorItemTechnologyText>
+                </MentorItemTechnologyWrapper>
+              );
+            })}
           </MentorItemTypesWrapper>
         </MentorItemCoreValuesWrapper>
         <MentorItemSocialIconsWrapper>
