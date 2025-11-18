@@ -37,6 +37,7 @@ export const theme = {
       valuesWrapperBgColor: "#f0f5f8",
       valuesWrapperBorderColor: "#bee3f8",
       technologyWrapperBgColor: "#e5f5fcff",
+      mentorSocialIcons: "#696f7d",
     },
   },
   dark: {
@@ -77,8 +78,7 @@ export const theme = {
       valuesWrapperBgColor: "#084263ff",
       valuesWrapperBorderColor: "#236489ff",
       technologyWrapperBgColor: "#0a2c77ff",
-
-
+      mentorSocialIcons: "#90a4b6ff",
     },
   },
 };

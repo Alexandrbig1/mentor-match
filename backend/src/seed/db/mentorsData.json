@@ -15,16 +15,21 @@
     "email": "alice.johnson@example.com",
     "location": "Evanston, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/alicejohnson" },
-      { "platform": "website", "url": "https://alicejohnson.dev" },
-      { "platform": "portfolio", "url": "https://portfolio.alicejohnson.dev" },
-      { "platform": "facebook", "url": "https://facebook.com/alicejohnson" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Integrity", "Continuous Learning", "Collaboration"],
     "description": "Experienced React developer passionate about mentoring junior developers in UI/UX best practices."
   },
   {
-    "name": "Brian Kim",
+    "name": "Alex Smith",
     "position": "Full Stack Developer",
     "technologies": [
       "React",
@@ -36,13 +41,18 @@
       "Styled Components"
     ],
     "phone": "+13125550456",
-    "email": "brian.kim@example.com",
+    "email": "alex.smith@example.com",
     "location": "Naperville, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/briankim" },
-      { "platform": "website", "url": "https://briank.dev" },
-      { "platform": "portfolio", "url": "https://portfolio.briank.dev" },
-      { "platform": "facebook", "url": "https://facebook.com/briankim" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Empathy", "Discipline", "Problem Solving"],
     "description": "Mentor focused on helping developers bridge the frontend-backend gap using modern tools like Node.js and MongoDB."
@@ -63,10 +73,15 @@
     "email": "cynthia.lee@example.com",
     "location": "Schaumburg, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/cynthialee" },
-      { "platform": "website", "url": "https://cynthialee.io" },
-      { "platform": "portfolio", "url": "https://portfolio.cynthialee.io" },
-      { "platform": "facebook", "url": "https://facebook.com/cynthialee" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Ownership", "Automation", "Efficiency"],
     "description": "DevOps specialist who loves teaching CI/CD, cloud deployment, and system reliability engineering to aspiring engineers."
@@ -88,10 +103,15 @@
     "email": "david.ramirez@example.com",
     "location": "Oak Park, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/davidramirez" },
-      { "platform": "website", "url": "https://davidcodes.com" },
-      { "platform": "portfolio", "url": "https://portfolio.davidcodes.com" },
-      { "platform": "facebook", "url": "https://facebook.com/davidramirez" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Precision", "Mentorship", "Security"],
     "description": "Loves working with APIs and databases, and helps junior devs master backend architecture and best practices."
@@ -104,10 +124,15 @@
     "email": "emma.patel@example.com",
     "location": "Chicago, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/emmapatel" },
-      { "platform": "website", "url": "https://emmapatel.dev" },
-      { "platform": "portfolio", "url": "https://portfolio.emmapatel.dev" },
-      { "platform": "facebook", "url": "https://facebook.com/emmapatel" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Leadership", "Empowerment", "Diversity"],
     "description": "Manager with a passion for helping engineers grow their careers through mentorship and goal setting."
@@ -122,14 +147,16 @@
     "socialLinks": [
       {
         "platform": "linkedin",
-        "url": "https://linkedin.com/in/samanthatorres"
+        "url": "/"
       },
-      { "platform": "website", "url": "https://samanthadev.dev" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
       {
-        "platform": "portfolio",
-        "url": "https://portfolio.samanthatorres.dev"
+        "platform": "stackoverflow",
+        "url": "/"
       },
-      { "platform": "facebook", "url": "https://facebook.com/samantha.codes" }
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Collaboration", "Accessibility", "Continuous Learning"],
     "description": "Passionate about crafting accessible, user-friendly web interfaces. Always learning and eager to mentor others starting their frontend journey."
@@ -150,10 +177,15 @@
     "email": "daniel.choi@example.com",
     "location": "Skokie, IL",
     "socialLinks": [
-      { "platform": "linkedin", "url": "https://linkedin.com/in/danielchoi" },
-      { "platform": "website", "url": "https://danielchoi.dev" },
-      { "platform": "portfolio", "url": "https://portfolio.danielchoi.dev" },
-      { "platform": "facebook", "url": "https://facebook.com/danielchoi.dev" }
+      { "platform": "linkedin", "url": "/" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Efficiency", "Integrity", "Mentorship"],
     "description": "Software engineer with a love for elegant code and helping others grow. Experienced in Node.js, React, and cloud technologies."
@@ -168,11 +200,16 @@
     "socialLinks": [
       {
         "platform": "linkedin",
-        "url": "https://linkedin.com/in/aaliyahmorgan"
+        "url": "/"
       },
-      { "platform": "website", "url": "https://aaliyahmorgan.ai" },
-      { "platform": "portfolio", "url": "https://portfolio.aaliyahmorgan.dev" },
-      { "platform": "facebook", "url": "https://facebook.com/aaliyah.datasci" }
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
+      {
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Curiosity", "Empathy", "Impact"],
     "description": "Data scientist focused on uncovering insights and telling stories with data. Loves teaching Python, ML, and helping others get into data science."
@@ -187,14 +224,16 @@
     "socialLinks": [
       {
         "platform": "linkedin",
-        "url": "https://linkedin.com/in/jorgefernandez"
+        "url": "/"
       },
-      { "platform": "website", "url": "https://jorgecodes.dev" },
-      { "platform": "portfolio", "url": "https://portfolio.jorge.dev" },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
       {
-        "platform": "facebook",
-        "url": "https://facebook.com/jorge.fernandez.dev"
-      }
+        "platform": "stackoverflow",
+        "url": "/"
+      },
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Resilience", "Clean Code", "Performance"],
     "description": "Backend specialist with deep experience in Express and MongoDB. Big advocate for clean architecture and performance-driven development."
@@ -216,510 +255,16 @@
     "socialLinks": [
       {
         "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
+        "url": "/"
       },
+      { "platform": "github", "url": "/" },
+      { "platform": "website", "url": "/" },
       {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
+        "platform": "stackoverflow",
+        "url": "/"
       },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie1.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie2.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie3.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie4.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie5.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie6.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie7.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie8.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie9.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie11.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie12.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie13.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie14.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
-    ],
-    "coreValues": ["Automation", "Accountability", "Teamwork"],
-    "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."
-  },
-   {
-    "name": "Natalie Brooks",
-    "position": "DevOps Engineer",
-    "technologies": [
-      "Docker",
-      "Kubernetes",
-      "AWS",
-      "Terraform",
-      "CI/CD",
-      "Bash"
-    ],
-    "phone": "+13124447890",
-    "email": "natalie15.brooks@example.com",
-    "location": "Evanston, IL",
-    "socialLinks": [
-      {
-        "platform": "linkedin",
-        "url": "https://linkedin.com/in/nataliebrooks"
-      },
-      {
-        "platform": "website",
-        "url": "https://nataliebrooks.devops"
-      },
-      {
-        "platform": "portfolio",
-        "url": "https://portfolio.natalieb.dev"
-      },
-      {
-        "platform": "facebook",
-        "url": "https://facebook.com/natalie.devops"
-      }
+      { "platform": "x", "url": "/" },
+      { "platform": "youtube", "url": "/" }
     ],
     "coreValues": ["Automation", "Accountability", "Teamwork"],
     "description": "DevOps engineer who loves infrastructure, CI/CD, and helping teams ship faster. Mentors engineers on containers, deployment pipelines, and cloud."

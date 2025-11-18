@@ -1,4 +1,5 @@
 import { getTechIconProps } from "../../../utils/getTechIconProps";
+import MentorSocialIcons from "../../../components/UI/MentorSocialIcons/MentorSocialIcons";
 import {
   MentorItemAvatarImage,
   MentorItemAvatarNameWrapper,
@@ -115,16 +116,7 @@ export default function MentorsItem({ mentor }: { mentor: Mentor }) {
           </MentorItemTypesWrapper>
         </MentorItemCoreValuesWrapper>
         <MentorItemSocialIconsWrapper>
-          {mentor.socialLinks.map((link, index) => (
-            <a
-              key={`${index}-${link.platform}`}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.platform}
-            </a>
-          ))}
+          <MentorSocialIcons socialLinks={mentor.socialLinks} />
         </MentorItemSocialIconsWrapper>
       </MentorItemContentWrapper>
     </MentorListItem>

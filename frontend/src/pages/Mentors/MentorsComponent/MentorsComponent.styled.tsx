@@ -82,6 +82,7 @@ export const MentorItemAvatarImage = styled.img`
   height: auto;
   object-fit: cover;
   border-radius: 1.2rem;
+  user-select: none;
 `;
 
 export const MentorItemDetails = styled.p`
@@ -234,6 +235,7 @@ export const MentorItemValuesItemsWrapper = styled.div`
   justify-content: center;
   gap: 0.4rem;
   flex-wrap: wrap;
+  user-select: none;
 `;
 
 export const MentorItemValuesText = styled.p`
@@ -247,7 +249,9 @@ export const MentorItemValuesText = styled.p`
 export const MentorItemSocialIconsWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  align-self: center;
+  gap: 2.4rem;
+  margin-top: 1.2rem;
 `;
 
 export const MentorItemTechnologyText = styled.span`
@@ -271,7 +275,7 @@ export const MentorItemTechnologyWrapper = styled.div<TechProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  user-select: none;
   gap: 0.8rem;
   padding: 0.6rem;
   border-radius: 0.6rem;
