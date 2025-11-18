@@ -10,8 +10,30 @@ import {
   MentorsMenu,
 } from "./MentorsComponent.styled";
 
+/* reuse Mentor type from MentorsItem file shape (kept local here to avoid circular imports) */
+type SocialLink = { platform: string; url: string };
+type Mentor = {
+  _id?: string;
+  avatar?: string | null;
+  name: string;
+  position?: string | null;
+  location?: string | null;
+  phone?: string | null;
+  email?: string | null;
+  description?: string | null;
+  coreValues: string[];
+  technologies: string[];
+  socialLinks: SocialLink[];
+};
+
+type GetMentorsResponse = {
+  data: Mentor[];
+  totalPages?: number;
+  total?: number;
+};
+
 export default function MentorsComponent() {
-  const [mentors, setMentors] = useState<any[]>([]);
+  const [mentors, setMentors] = useState<Mentor[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [loadingMore, setLoadingMore] = useState<boolean>(false);
@@ -31,7 +53,7 @@ export default function MentorsComponent() {
           setLoadingMore(true);
         }
 
-        const res = await getAllMentors({ page, limit });
+        const res = (await getAllMentors({ page, limit })) as GetMentorsResponse;
 
         if (!mounted) return;
 
@@ -49,6 +71,7 @@ export default function MentorsComponent() {
           setError(null);
         }
       } catch (err) {
+        console.error("Failed to load mentors:", err);
         if (!mounted) return;
         setError("We couldn't load mentors right now. Please try again soon.");
       } finally {
@@ -80,12 +103,12 @@ export default function MentorsComponent() {
             <LoadingSmall message />
           </MentorListLoadingItem>
         ) : mentors.length > 0 ? (
-          mentors.map((mentor: any) => (
+          mentors.map((mentor: Mentor) => (
             <MentorsItem key={mentor._id} mentor={mentor} />
           ))
         ) : (
           <li>
-            <ErrorMessage error={error} />
+            <ErrorMessage error={error ?? "No mentors found. Try adjusting filters or try again later."} />
           </li>
         )}
       </MentorsMenu>

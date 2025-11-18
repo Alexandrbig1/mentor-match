@@ -23,7 +23,23 @@ import {
   MentorItemValuesText,
 } from "./MentorsComponent.styled";
 
-export default function MentorsItem({ mentor }) {
+/* local Mentor type matching usage in component */
+type SocialLink = { platform: string; url: string };
+type Mentor = {
+  _id?: string;
+  avatar?: string | null;
+  name: string;
+  position?: string | null;
+  location?: string | null;
+  phone?: string | null;
+  email?: string | null;
+  description?: string | null;
+  coreValues: string[];
+  technologies: string[];
+  socialLinks: SocialLink[];
+};
+
+export default function MentorsItem({ mentor }: { mentor: Mentor }) {
   return (
     <MentorListItem>
       <MentorItemAvatarNameWrapper>

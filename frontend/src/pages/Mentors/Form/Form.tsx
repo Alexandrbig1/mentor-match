@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTechIconProps } from "../../../utils/getTechIconProps";
 import { getAllTechnologies } from "../../../services/getAllTechnologies";
+import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
 import {
   FormNameInput,
   FormNameWrapper,
@@ -16,7 +17,6 @@ import {
   TechnologyErrorText,
   TechnologyErrorWrapper,
 } from "./Form.styled";
-import LoadingSmall from "../../../components/UI/LoadingSmall/LoadingSmall";
 
 export default function Form() {
   const [technologies, setTechnologies] = useState<string[]>([]);
@@ -36,6 +36,8 @@ export default function Form() {
           setError(null);
         }
       } catch (err) {
+        // use the caught error to help debugging and still show user-friendly message
+        console.error("Failed to load technologies:", err);
         setError(
           "Sorry, we couldn't load the list of technologies. Please try again later."
         );
@@ -94,7 +96,7 @@ export default function Form() {
               >
                 <FormTechnologyInput
                   type="checkbox"
-                  id="expertise"
+                  id={`expertise-${technology}`}
                   name="expertise"
                   value={technology}
                   checked={selectedTechs.includes(technology)}

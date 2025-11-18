@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { primaryFont } from "../../../components/fonts";
 
+/* transient props for technology items */
+type TechProps = { $color?: string; $hoverColor?: string };
+
 export const MentorsComponentWrapper = styled.div`
   position: relative;
   width: 65%;
@@ -219,7 +222,7 @@ export const MentorItemTypesItemsSubTitle = styled.p`
   &::selection {
     background-color: ${(p) => p.theme.colors.selectionLightBgColor};
   }
-`
+`;
 
 export const MentorItemValuesItemsWrapper = styled.div`
   padding: 0.2rem 0.8rem;
@@ -255,29 +258,27 @@ export const MentorItemTechnologyText = styled.span`
   text-transform: capitalize;
 `;
 
-export const MentorItemTechnologyIconWrapper = styled.span`
+/* typed transient props applied here to avoid TS errors when using $color/$hoverColor */
+export const MentorItemTechnologyIconWrapper = styled.span<TechProps>`
   display: flex;
   font-size: 2.4rem;
-  color: ${(p) => p?.$color || p.theme.colors.mainTextColor};
+  color: ${(p) => p.$color || p.theme.colors.mainTextColor};
   transition: all var(--primary-transition);
 `;
 
-export const MentorItemTechnologyWrapper = styled.div`
- position: relative;
+export const MentorItemTechnologyWrapper = styled.div<TechProps>`
+  position: relative;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   cursor: pointer;
   gap: 0.8rem;
   padding: 0.6rem;
   border-radius: 0.6rem;
-  /* background-color: ${(p) => p?.theme.colors.technologyWrapperBgColor}; */
-
 
   &:hover {
     ${MentorItemTechnologyIconWrapper} {
-      color: ${(p) => p?.$hoverColor || p.theme.colors.mainTextColor};
+      color: ${(p) => p.$hoverColor || p.theme.colors.mainTextColor};
     }
   }
 `;
