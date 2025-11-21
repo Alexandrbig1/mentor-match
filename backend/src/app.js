@@ -23,6 +23,9 @@ app.use("/api/mentors", mentorRouter);
 
 app.use("/api/technologies", technologyRouter);
 
+// Health route (no limiter)
+app.use('/health', healthRouter);
+
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
 });
