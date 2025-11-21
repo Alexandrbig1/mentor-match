@@ -5,6 +5,7 @@ import helmet from "helmet";
 import rateLimit from "express-rate-limit";
 import mentorRouter from "./routes/mentors.routes.js";
 import technologyRouter from "./routes/technologies.routes.js";
+import healthRouter from "./routes/health.routes.js";
 
 const app = express();
 
