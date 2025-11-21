@@ -9,24 +9,56 @@ import healthRouter from "./routes/health.routes.js";
 
 const app = express();
 
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 100,
-});
-
-app.use(limiter);
+// global middlewares
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
 
-app.use("/api/mentors", mentorRouter);
+app.use("/health", healthRouter);
 
-app.use("/api/technologies", technologyRouter);
+// rate limiters
+const readLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 300, // relaxed for public reads
+  message: { error: "Too many requests, please try again later." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
-// Health route (no limiter)
-app.use('/health', healthRouter);
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 min
+  max: 10, // strict for auth routes
+  message: { error: "Too many login attempts. Try again later." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
 
+const writeLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 30, // write requests per IP per minute
+  message: { error: "Too many write requests. Please slow down." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.use("/api/mentors", readLimiter, mentorRouter);
+app.use("/api/technologies", readLimiter, technologyRouter);
+
+// Example: mount auth router with authLimiter
+// import authRouter from './routes/auth.routes.js'
+// app.use('/api/auth', authLimiter, authRouter);
+
+// Apply writeLimiter only for write verbs under /api
+app.use("/api", (req, res, next) => {
+  const writeMethods = ["POST", "PUT", "PATCH", "DELETE"];
+  if (writeMethods.includes(req.method)) {
+    return writeLimiter(req, res, next);
+  }
+  return next();
+});
+
+// fallback 404 / error handlers
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
 });
