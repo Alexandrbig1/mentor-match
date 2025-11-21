@@ -38,6 +38,7 @@ export const theme = {
       valuesWrapperBorderColor: "#bee3f8",
       technologyWrapperBgColor: "#e5f5fcff",
       mentorSocialIcons: "#696f7d",
+      newColor: "#696f7d",
     },
   },
   dark: {
@@ -79,6 +80,8 @@ export const theme = {
       valuesWrapperBorderColor: "#236489ff",
       technologyWrapperBgColor: "#0a2c77ff",
       mentorSocialIcons: "#90a4b6ff",
+      newColor: "#696f7d",
+
     },
   },
 };

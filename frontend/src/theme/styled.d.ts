@@ -40,6 +40,7 @@ declare module "styled-components" {
       valuesWrapperBorderColor: string;
       technologyWrapperBgColor: string;
       mentorSocialIcons: string;
+      newColor: string;
     };
   }
 }
