@@ -5,14 +5,21 @@ import { FaFly } from "react-icons/fa6";
 export const HeroWrapper = styled.section`
   margin: 0 auto;
   width: 100%;
-  max-width: 80%;
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
   gap: 2.4rem;
+  padding: 0 2.4rem;
+
+  @media (min-width: 880px) {
+    flex-direction: row;
+    align-items: center;
+    max-width: 80%;
+    padding: 0;
+  }
 `;
 
 export const HeroTitleWrapper = styled.div`
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
@@ -21,6 +28,10 @@ export const HeroTitleWrapper = styled.div`
     -10px -10px 20px ${(p) => p.theme.colors.heroBoxShadow};
   padding: 2.4rem;
   border-radius: 0.8rem;
+
+  @media (min-width: 880px) {
+    width: 45%;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -53,11 +64,13 @@ export const HeroButtonWrapper = styled.div`
 `;
 
 export const HeroButton = styled.button`
+  width: 100%;
   border: none;
   outline: none;
   background: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.2rem;
   font-family: ${primaryFont};
   font-weight: 500;
@@ -77,6 +90,10 @@ export const HeroButton = styled.button`
   &:hover {
     background-color: ${(p) => p.theme.colors.buttonBgHoverColor};
   }
+
+  @media (min-width: 880px) {
+    width: auto;
+  }
 `;
 
 export const HeroButtonIcon = styled(FaFly)`
@@ -86,8 +103,12 @@ export const HeroButtonIcon = styled(FaFly)`
 `;
 
 export const HeroImgWrapper = styled.div`
-  width: 55%;
+  width: 100%;
   user-select: none;
+
+  @media (min-width: 880px) {
+    width: 55%;
+  }
 `;
 
 export const HeroImg = styled.img`

@@ -1,5 +1,6 @@
 import Logo from "../Logo/Logo";
 import { ThemeSwitcher } from "../UI/ThemeSwitcher/ThemeSwitcher";
+import MobileHeader from "./MobileHeader/MobileHeader";
 import {
   HeaderContainer,
   HeaderMentorButton,
@@ -11,6 +12,8 @@ import {
 
 export default function Header() {
   return (
+    <>
+    <MobileHeader />
     <HeaderContainer>
       <Logo />
       <nav>
@@ -30,6 +33,6 @@ export default function Header() {
           <HeaderMentorButtonIcon />
         </HeaderMentorButton>
       </HeaderMentorButtonThemeWrapper>
-    </HeaderContainer>
+    </HeaderContainer></>
   );
 }

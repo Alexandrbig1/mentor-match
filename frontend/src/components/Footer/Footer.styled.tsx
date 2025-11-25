@@ -5,15 +5,24 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export const FooterWrapper = styled.footer`
   margin: 0 auto;
   width: 100%;
-  max-width: 80%;
-  height: 7.2rem;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  gap: 2.4rem;
+  padding: 1.6rem 2.4rem;
+
+  @media (min-width: 880px) {
+    height: 7.2rem;
+    max-width: 80%;
+    padding: 0;
+    flex-direction: row;
+    gap: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 `;
 
 export const FooterTextWrapper = styled.div`

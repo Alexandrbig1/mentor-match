@@ -4,13 +4,13 @@ import { IoIosArrowForward } from "react-icons/io";
 import { primaryFont } from "../fonts";
 
 export const HeaderContainer = styled.header`
+  display: none;
   background-color: ${(p) => p.theme.colors.mainBgColor};
   width: 100%;
   height: 7.2rem;
   max-width: 80%;
   margin: 0 auto;
   padding: 1.2rem 2.4rem;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
@@ -18,6 +18,10 @@ export const HeaderContainer = styled.header`
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+
+  @media (min-width: 880px) {
+    display: flex;
+  }
 `;
 
 export const HeaderNavigationMenu = styled.ul`

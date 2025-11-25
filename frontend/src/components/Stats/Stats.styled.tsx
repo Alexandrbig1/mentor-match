@@ -4,21 +4,33 @@ import { primaryFont } from "../fonts";
 export const StatsWrapper = styled.section`
   margin: 0 auto;
   width: 100%;
-  max-width: 80%;
   border-radius: 1.2rem;
+  padding: 0 2.4rem;
+
+  @media (min-width: 880px) {
+    padding: 0;
+    max-width: 80%;
+  }
 `;
 
 export const StatsMenu = styled.ul`
   position: relative;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.2rem;
   border-radius: 2.4rem;
-  background: linear-gradient(
+  
+
+  @media (min-width: 880px) {
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
     145deg,
     ${(p) => p.theme.colors.statsBoxShadowColor},
     ${(p) => p.theme.colors.statsBoxShadowColor}
   );
+  }
 `;
 
 export const StatsMenuItem = styled.li`

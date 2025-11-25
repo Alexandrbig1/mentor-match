@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
 export const RootLayoutWrapper = styled.main`
-  /* min-height: 100vh; */
-  /* height: 100%; */
-  height: 100vh;
-  max-height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -15,4 +13,9 @@ export const RootLayoutWrapper = styled.main`
   padding-bottom: 7.2rem;
 
   overflow: hidden;
+
+  @media (min-width: 880px) {
+    height: 100vh;
+    max-height: 100vh;
+  }
 `;
