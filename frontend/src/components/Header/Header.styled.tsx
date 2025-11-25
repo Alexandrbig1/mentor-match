@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header`
   transform: translateX(-50%);
   z-index: 1000;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     display: flex;
   }
 `;

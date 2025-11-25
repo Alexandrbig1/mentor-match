@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   flex: 1;
   gap: 4.8rem;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   justify-content: center;
   }
 `;

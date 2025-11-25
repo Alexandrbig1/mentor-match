@@ -10,7 +10,7 @@ export const HeroWrapper = styled.section`
   gap: 2.4rem;
   padding: 0 2.4rem;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     flex-direction: row;
     align-items: center;
     max-width: 80%;
@@ -29,7 +29,7 @@ export const HeroTitleWrapper = styled.div`
   padding: 2.4rem;
   border-radius: 0.8rem;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     width: 45%;
   }
 `;
@@ -91,7 +91,7 @@ export const HeroButton = styled.button`
     background-color: ${(p) => p.theme.colors.buttonBgHoverColor};
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     width: auto;
   }
 `;
@@ -106,7 +106,7 @@ export const HeroImgWrapper = styled.div`
   width: 100%;
   user-select: none;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     width: 55%;
   }
 `;

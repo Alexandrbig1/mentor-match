@@ -14,7 +14,7 @@ export const RootLayoutWrapper = styled.main`
 
   overflow: hidden;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     height: 100vh;
     max-height: 100vh;
   }

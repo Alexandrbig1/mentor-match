@@ -7,7 +7,7 @@ export const MobileHeaderContainer = styled.header`
   width: 100%;
   padding: 12px 16px;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   display: none;
 
   }
@@ -33,7 +33,7 @@ export const Overlay = styled.div<{ visible: boolean }>`
   visibility: ${(p) => (p.visible ? "visible" : "hidden")};
   transition: opacity 240ms ease, visibility 240ms ease;
   z-index: 999;
-  @media (min-width: 881px) {
+  @media (min-width: 768px) {
     display: none;
   }
 `;
@@ -51,11 +51,11 @@ export const MobileMenu = styled.aside<{ open: boolean }>`
   transition: transform 300ms cubic-bezier(0.2, 0.9, 0.2, 1);
   z-index: 1000;
   padding: 20px;
-  display: none;
+  display: block;
   overflow-y: auto;
 
-  @media (max-width: 880px) {
-    display: block;
+  @media (min-width: 768px) {
+    display: none;
   }
 `;
 

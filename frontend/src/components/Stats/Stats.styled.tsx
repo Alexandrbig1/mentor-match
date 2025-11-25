@@ -7,7 +7,7 @@ export const StatsWrapper = styled.section`
   border-radius: 1.2rem;
   padding: 0 2.4rem;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     padding: 0;
     max-width: 80%;
   }
@@ -21,7 +21,7 @@ export const StatsMenu = styled.ul`
   border-radius: 2.4rem;
   
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     display: flex;
     align-items: center;
 

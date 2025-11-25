@@ -12,7 +12,7 @@ export const FooterWrapper = styled.footer`
   gap: 2.4rem;
   padding: 1.6rem 2.4rem;
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
     height: 7.2rem;
     max-width: 80%;
     padding: 0;

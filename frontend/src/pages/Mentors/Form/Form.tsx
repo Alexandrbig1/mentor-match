@@ -16,6 +16,9 @@ import {
   TechnologyErrorIcon,
   TechnologyErrorText,
   TechnologyErrorWrapper,
+  MobileFilterButton,
+  MobileOverlay,
+  MobilePanelCloseButton,
 } from "./Form.styled";
 
 export default function Form() {
@@ -23,6 +26,9 @@ export default function Form() {
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+
+  // mobile bottom sheet open flag
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -36,7 +42,6 @@ export default function Form() {
           setError(null);
         }
       } catch (err) {
-        // use the caught error to help debugging and still show user-friendly message
         console.error("Failed to load technologies:", err);
         setError(
           "Sorry, we couldn't load the list of technologies. Please try again later."
@@ -50,6 +55,14 @@ export default function Form() {
     fetchTechnologies();
   }, []);
 
+  // lock body scroll when mobile panel open
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
     setSelectedTechs((prev) =>
@@ -58,59 +71,87 @@ export default function Form() {
   };
 
   return (
-    <FormWrapper>
-      <FormTitle>Search Mentors</FormTitle>
-      <FormNameWrapper>
-        <FormNameInput
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Search by Name"
-          required
-        />
-        <SearchIcon />
-      </FormNameWrapper>
-      <FormTitle>Technology</FormTitle>
-      {loading ? (
-        <div>
-          <LoadingSmall message />
-        </div>
-      ) : error ? (
-        <TechnologyErrorWrapper>
-          <TechnologyErrorIcon>
-            <use href="/sprite.svg#icon-db-error"></use>
-          </TechnologyErrorIcon>
-          <TechnologyErrorText>{error}</TechnologyErrorText>
-        </TechnologyErrorWrapper>
-      ) : (
-        <FormTechnologyWrapper>
-          {technologies?.map((technology) => {
-            const { IconComponent, color, hoverColor } =
-              getTechIconProps(technology);
-            return (
-              <FormTechnologyLabel
-                key={technology}
-                $color={color}
-                $hoverColor={hoverColor}
-                $checked={selectedTechs.includes(technology)}
-              >
-                <FormTechnologyInput
-                  type="checkbox"
-                  id={`expertise-${technology}`}
-                  name="expertise"
-                  value={technology}
-                  checked={selectedTechs.includes(technology)}
-                  onChange={handleCheck}
-                />
-                <FormTechnologyIconWrapper $color={color}>
-                  <IconComponent />
-                </FormTechnologyIconWrapper>
-                <FormTechnologyInputText>{technology}</FormTechnologyInputText>
-              </FormTechnologyLabel>
-            );
-          })}
-        </FormTechnologyWrapper>
-      )}
-    </FormWrapper>
+    <>
+      {/* FormWrapper receives transient prop $mobileOpen to control mobile visibility */}
+      <FormWrapper $mobileOpen={mobileOpen}>
+        {/* close button inside the panel for mobile */}
+        <MobilePanelCloseButton
+          aria-label="Close filters"
+          onClick={() => setMobileOpen(false)}
+        >
+          ✕
+        </MobilePanelCloseButton>
+
+        <FormTitle>Search Mentors</FormTitle>
+        <FormNameWrapper>
+          <FormNameInput
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Search by Name"
+            required
+          />
+          <SearchIcon />
+        </FormNameWrapper>
+
+        <FormTitle>Technology</FormTitle>
+        {loading ? (
+          <div>
+            <LoadingSmall message />
+          </div>
+        ) : error ? (
+          <TechnologyErrorWrapper>
+            <TechnologyErrorIcon>
+              <use href="/sprite.svg#icon-db-error"></use>
+            </TechnologyErrorIcon>
+            <TechnologyErrorText>{error}</TechnologyErrorText>
+          </TechnologyErrorWrapper>
+        ) : (
+          <FormTechnologyWrapper>
+            {technologies?.map((technology) => {
+              const { IconComponent, color, hoverColor } =
+                getTechIconProps(technology);
+              return (
+                <FormTechnologyLabel
+                  key={technology}
+                  $color={color}
+                  $hoverColor={hoverColor}
+                  $checked={selectedTechs.includes(technology)}
+                >
+                  <FormTechnologyInput
+                    type="checkbox"
+                    id={`expertise-${technology}`}
+                    name="expertise"
+                    value={technology}
+                    checked={selectedTechs.includes(technology)}
+                    onChange={handleCheck}
+                  />
+                  <FormTechnologyIconWrapper $color={color}>
+                    <IconComponent />
+                  </FormTechnologyIconWrapper>
+                  <FormTechnologyInputText>{technology}</FormTechnologyInputText>
+                </FormTechnologyLabel>
+              );
+            })}
+          </FormTechnologyWrapper>
+        )}
+      </FormWrapper>
+
+      {/* mobile fixed bottom button */}
+      <MobileFilterButton
+        aria-expanded={mobileOpen}
+        aria-controls="filters-panel"
+        onClick={() => setMobileOpen((s) => !s)}
+      >
+        Filters
+      </MobileFilterButton>
+
+      {/* overlay for mobile when panel open */}
+      <MobileOverlay
+        hidden={!mobileOpen}
+        onClick={() => setMobileOpen(false)}
+        aria-hidden={!mobileOpen}
+      />
+    </>
   );
 }

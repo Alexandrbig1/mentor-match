@@ -19,7 +19,7 @@ export const SocialIconLink = styled.a`
 width: 3.2rem;
   height: 3.2rem;
 
- @media (min-width: 880px) {
+ @media (min-width: 768px) {
 width: 2.8rem;
   height: 2.8rem;
   }
@@ -35,7 +35,7 @@ export const OpenCodeChicagoIcon = styled.img`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   height: 2.8rem;
   width: 2.8rem;
   }
@@ -51,7 +51,7 @@ export const GitHubIcon = styled(FaGithub)`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   font-size: 2.8rem;
 
 
@@ -69,7 +69,7 @@ export const YouTubeIcon = styled(FaYoutube)`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   font-size: 2.8rem;
 
   }
@@ -86,7 +86,7 @@ export const LinkedInIcon = styled(FaLinkedin)`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   font-size: 2.8rem;
 
   }
@@ -103,7 +103,7 @@ export const TwitterIcon = styled(FaXTwitter)`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   font-size: 2.8rem;
 
   }
@@ -120,7 +120,7 @@ export const StackOverflowIcon = styled(FaStackOverflow)`
     transform: scale(1.2);
   }
 
-  @media (min-width: 880px) {
+  @media (min-width: 768px) {
   font-size: 2.8rem;
   }
 `;
