@@ -5,12 +5,12 @@ export const ErrorWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2.4rem;
+  gap: 1.2rem;
   width: 100%;
   text-align: center;
   
-
   @media (min-width: 768px) {
+    gap: 2.4rem;
     position: absolute;
     left: 50%;
     top: 7.2rem;

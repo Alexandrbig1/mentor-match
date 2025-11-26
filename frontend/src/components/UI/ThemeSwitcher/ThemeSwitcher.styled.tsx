@@ -18,12 +18,12 @@ export const IconClickLight = styled(TbSunHigh)`
   border-radius: 50%;
   padding: 0.6rem;
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.switcherHoverBg};
-  }
-
   @media (min-width: 768px) {
     font-size: 3.6rem;
+
+    &:hover {
+      background-color: ${(p) => p.theme.colors.switcherHoverBg};
+    }
   }
 `;
 
@@ -34,11 +34,11 @@ export const IconClickDark = styled(TbMoon)`
   border-radius: 50%;
   padding: 0.6rem;
 
-  &:hover {
-    background-color: ${(p) => p.theme.colors.switcherHoverBg};
-  }
-
   @media (min-width: 768px) {
     font-size: 3.6rem;
+
+    &:hover {
+    background-color: ${(p) => p.theme.colors.switcherHoverBg};
+    }
   }
 `;

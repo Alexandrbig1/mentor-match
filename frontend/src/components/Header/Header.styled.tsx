@@ -89,6 +89,7 @@ export const HeaderMentorButtonIcon = styled(IoIosArrowForward)`
   color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
   transition: transform var(--linear-transition);
   transform: translateX(0);
+  margin-right: -4px;
 `;
 
 export const HeaderMentorButton = styled.button`
@@ -101,6 +102,9 @@ export const HeaderMentorButton = styled.button`
   color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
   width: 100%;
   min-width: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   display: flex;
   align-items: center;
