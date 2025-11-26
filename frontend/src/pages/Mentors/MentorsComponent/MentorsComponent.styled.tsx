@@ -6,7 +6,7 @@ type TechProps = { $color?: string; $hoverColor?: string };
 
 export const MentorsComponentWrapper = styled.div`
   position: relative;
-  width: 65%;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
   padding-right: 0.2rem;
@@ -27,6 +27,10 @@ export const MentorsComponentWrapper = styled.div`
   &::-webkit-scrollbar-track {
     background-color: ${(p) => p.theme.colors.scrollbarBgColor};
     border-radius: 12px;
+  }
+
+  @media (min-width: 768px) {
+    width: 65%;
   }
 `;
 
@@ -49,12 +53,15 @@ export const MentorListItem = styled.li`
   flex-direction: column;
   gap: 2.4rem;
   width: 100%;
-  width: calc(100% / 2 - 0.6rem);
   max-width: 100%;
   padding: 1.2rem;
   border-radius: 1.2rem;
   border: 1px solid ${(p) => p.theme.colors.formBorderColor};
   padding: 2.4rem;
+
+  @media (min-width: 768px) {
+    width: calc(100% / 2 - 0.6rem);
+  }
 `;
 
 export const MentorItemAvatarNameWrapper = styled.div`
