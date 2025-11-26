@@ -7,10 +7,15 @@ export const ErrorWrapper = styled.div`
   justify-content: center;
   gap: 2.4rem;
   width: 100%;
-  position: absolute;
-  left: 50%;
-  top: 7.2rem;
-  transform: translateX(-50%);
+  text-align: center;
+  
+
+  @media (min-width: 768px) {
+    position: absolute;
+    left: 50%;
+    top: 7.2rem;
+    transform: translateX(-50%);
+  }
 `;
 
 export const ErrorText = styled.p`
