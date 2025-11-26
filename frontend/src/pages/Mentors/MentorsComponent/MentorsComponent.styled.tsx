@@ -95,12 +95,16 @@ export const MentorItemAvatarImage = styled.img`
 export const MentorItemDetails = styled.p`
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
 
   &::selection {
     background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
   }
 `;
 
@@ -115,7 +119,7 @@ export const MentorItemDetailsContact = styled.p`
   width: 100%;
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
   position: relative;
@@ -139,6 +143,10 @@ export const MentorItemDetailsContact = styled.p`
   &:focus::after {
     transform-origin: left;
     transform: scaleX(1);
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
   }
 `;
 
@@ -186,29 +194,41 @@ export const MentorItemContentWrapper = styled.div`
 export const MentorItemName = styled.h2`
   font-family: ${primaryFont};
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const MentorItemPosition = styled.h3`
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: italic;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const MentorItemDescription = styled.p`
   font-family: ${primaryFont};
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: ${(p) => p.theme.colors.secondaryTextColor};
 
   &::selection {
     background-color: ${(p) => p.theme.colors.selectionLightBgColor};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
   }
 `;
 

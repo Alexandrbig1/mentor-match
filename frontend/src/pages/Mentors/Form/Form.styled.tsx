@@ -39,9 +39,9 @@ export const FormWrapper = styled.form<{ $mobileOpen?: boolean }>`
   /* hidden on small screens by default; shown as bottom-sheet when $mobileOpen true */
   @media (max-width: 768px) {
     display: ${(p) => (p.$mobileOpen ? "flex" : "none")};
-    width: calc(100% - 32px);
+    width: calc(100% - 48px);
     max-width: 960px;
-    padding: 1.6rem;
+    padding: 1.4rem;
     border-radius: 12px 12px 0 0;
     position: fixed;
     left: 50%;
@@ -215,20 +215,26 @@ export const MobileFilterButton = styled.button`
   display: none;
 
   @media (max-width: 768px) {
-    display: inline-flex;
+    width: 100%;
+    max-width: 22rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 16px;
+    bottom: 2.4rem;
     z-index: 1000;
+    font-weight: 500;
     background: ${(p) => p.theme.colors.linkColor};
     color: ${(p) => p.theme.colors.buttonTextColor || "#fff"};
     border: none;
-    padding: 12px 20px;
-    border-radius: 999px;
+    padding: 1.4rem 2.4rem;
+    border-radius: 1.2rem;
     font-size: 1.4rem;
     box-shadow: 0 8px 20px rgba(2,6,23,0.12);
     cursor: pointer;
+    text-transform: uppercase;
   }
 `;
 
@@ -248,14 +254,16 @@ export const MobileOverlay = styled.div<{ hidden?: boolean }>`
 /* a small close button shown inside the panel (top-right) */
 export const MobilePanelCloseButton = styled.button`
   display: none;
+
   @media (max-width: 768px) {
     display: inline-flex;
     position: absolute;
-    right: 12px;
-    top: 10px;
+    right: 1.4rem;
+    top: 2.4rem;
     background: transparent;
+    color: ${(p) => p.theme.colors.mainTextColor};
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     cursor: pointer;
   }
 `;
