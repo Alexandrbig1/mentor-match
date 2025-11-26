@@ -87,7 +87,7 @@ export default function Stats() {
               <CountUp end={mentorsCount} duration={1.2} />
             )}
           </StatsMenuItemSpan>
-          <StatsMenuItemTitle>Expert Mentors</StatsMenuItemTitle>
+          <StatsMenuItemTitle>Expert mentors</StatsMenuItemTitle>
         </StatsMenuItem>
         <StatsMenuItem>
           <StatsMenuItemSpan>

@@ -1,15 +1,15 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const MobileHeaderContainer = styled.header`
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 16px;
+  padding: 1.2rem 1.6rem;
 
   @media (min-width: 768px) {
-  display: none;
-
+    display: none;
   }
 `;
 
@@ -19,10 +19,8 @@ export const BurgerButton = styled.button`
   justify-content: center;
   background: transparent;
   border: none;
-  padding: 8px;
-  margin-left: 8px;
   cursor: pointer;
-  color: inherit;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 export const Overlay = styled.div<{ visible: boolean }>`
@@ -33,6 +31,7 @@ export const Overlay = styled.div<{ visible: boolean }>`
   visibility: ${(p) => (p.visible ? "visible" : "hidden")};
   transition: opacity 240ms ease, visibility 240ms ease;
   z-index: 999;
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -44,8 +43,8 @@ export const MobileMenu = styled.aside<{ open: boolean }>`
   left: 0;
   height: 100%;
   width: 86%;
-  max-width: 340px;
-  background: var(--background, #fff);
+  max-width: 34rem;
+  background: ${(p) => p.theme.colors.mainBgColor};
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.12);
   transform: translateX(${(p) => (p.open ? "0" : "-100%")});
   transition: transform 300ms cubic-bezier(0.2, 0.9, 0.2, 1);
@@ -68,31 +67,34 @@ export const MobileMenuHeader = styled.div`
 export const MobileCloseButton = styled.button`
   background: transparent;
   border: none;
-  padding: 6px;
   cursor: pointer;
+  color: ${(p) => p.theme.colors.mainTextColor};
+  width: 2rem;
+  height: 2rem;
 `;
 
 export const MobileNav = styled.ul`
   list-style: none;
-  margin: 20px 0 0 0;
+  margin: 2rem 0 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1.2rem;
 `;
 
-export const MobileNavItem = styled.li`
-  a {
+export const MobileNavItemLink = styled(NavLink)`
     display: inline-block;
     padding: 10px 6px;
     font-size: 16px;
-  }
+    color: ${p => p.theme.colors.mainTextColor};
 `;
 
 export const MobileAction = styled.div`
   margin-top: 18px;
 `;
 
-export const MobileTheme = styled.div`
-  margin-top: 12px;
+export const MobileHeaderBurgerWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;  
 `;

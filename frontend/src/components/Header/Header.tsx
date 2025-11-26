@@ -13,26 +13,27 @@ import {
 export default function Header() {
   return (
     <>
-    <MobileHeader />
-    <HeaderContainer>
-      <Logo />
-      <nav>
-        <HeaderNavigationMenu>
-          <li>
-            <HeaderNavLink to="/">Home</HeaderNavLink>
-          </li>
-          <li>
-            <HeaderNavLink to="/mentors">Mentors</HeaderNavLink>
-          </li>
-        </HeaderNavigationMenu>
-      </nav>
-      <HeaderMentorButtonThemeWrapper>
-        <ThemeSwitcher />
-        <HeaderMentorButton>
-          Become a Mentor
-          <HeaderMentorButtonIcon />
-        </HeaderMentorButton>
-      </HeaderMentorButtonThemeWrapper>
-    </HeaderContainer></>
+      <MobileHeader />
+      <HeaderContainer>
+        <Logo />
+        <nav>
+          <HeaderNavigationMenu>
+            <li>
+              <HeaderNavLink to="/">Home</HeaderNavLink>
+            </li>
+            <li>
+              <HeaderNavLink to="/mentors">Mentors</HeaderNavLink>
+            </li>
+          </HeaderNavigationMenu>
+        </nav>
+        <HeaderMentorButtonThemeWrapper>
+          <ThemeSwitcher />
+          <HeaderMentorButton>
+            Become a Mentor
+            <HeaderMentorButtonIcon />
+          </HeaderMentorButton>
+        </HeaderMentorButtonThemeWrapper>
+      </HeaderContainer>
+    </>
   );
 }

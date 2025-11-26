@@ -37,13 +37,17 @@ export const HeroTitleWrapper = styled.div`
 export const HeroTitle = styled.h1`
   font-family: ${primaryFont};
   font-weight: 700;
-  font-size: 3.6rem;
+  font-size: 2.8rem;
   line-height: 1.15;
   text-transform: uppercase;
   color: ${(p) => p.theme.colors.mainTextColor};
 
   &::selection {
     background-color: ${(p) => p.theme.colors.selectionBgColor};
+  }
+
+  @media (min-width: 768px) {
+    font-size: 3.6rem;
   }
 `;
 
