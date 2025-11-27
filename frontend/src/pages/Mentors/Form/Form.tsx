@@ -21,13 +21,19 @@ import {
   MobilePanelCloseButton,
 } from "./Form.styled";
 
-export default function Form() {
+type Filters = { name?: string; tech?: string[] };
+
+export default function Form({
+  onChangeFilters,
+}: {
+  onChangeFilters?: (filters: Filters) => void;
+}) {
   const [technologies, setTechnologies] = useState<string[]>([]);
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  // mobile bottom sheet open flag
+  const [name, setName] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -63,6 +69,27 @@ export default function Form() {
     };
   }, [mobileOpen]);
 
+  // notify parent when technologies change
+  useEffect(() => {
+    onChangeFilters?.({
+      name: name.length >= 2 ? name : undefined,
+      tech: selectedTechs.length ? selectedTechs : undefined,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedTechs]);
+
+  // debounce name input and notify parent when length >= 2, clear when <2
+  useEffect(() => {
+    const t = setTimeout(() => {
+      onChangeFilters?.({
+        name: name.length >= 2 ? name : undefined,
+        tech: selectedTechs.length ? selectedTechs : undefined,
+      });
+    }, 400);
+    return () => clearTimeout(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name]);
+
   const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = e.target;
     setSelectedTechs((prev) =>
@@ -89,7 +116,8 @@ export default function Form() {
             id="name"
             name="name"
             placeholder="Search by Name"
-            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <SearchIcon />
         </FormNameWrapper>

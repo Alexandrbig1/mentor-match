@@ -32,7 +32,11 @@ type GetMentorsResponse = {
   total?: number;
 };
 
-export default function MentorsComponent() {
+export default function MentorsComponent({
+  filters,
+}: {
+  filters?: { name?: string; tech?: string[] };
+}) {
   const [mentors, setMentors] = useState<Mentor[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -41,6 +45,11 @@ export default function MentorsComponent() {
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(20);
   const [totalPage, setTotalPage] = useState<number>(0);
+
+  // reset page when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [filters?.name, filters?.tech?.length]);
 
   useEffect(() => {
     let mounted = true;
@@ -53,7 +62,17 @@ export default function MentorsComponent() {
           setLoadingMore(true);
         }
 
-        const res = (await getAllMentors({ page, limit })) as GetMentorsResponse;
+        type GetMentorsParams = {
+          page: number;
+          limit: number;
+          name?: string;
+          tech?: string[];
+        };
+        const params: GetMentorsParams = { page, limit };
+        if (filters?.name) params.name = filters.name;
+        if (filters?.tech && filters.tech.length) params.tech = filters.tech;
+
+        const res = (await getAllMentors(params)) as GetMentorsResponse;
 
         if (!mounted) return;
 
@@ -65,7 +84,7 @@ export default function MentorsComponent() {
           setMentors((prev) => [...prev, ...res.data]);
         }
 
-        if (res.total === 0 && page === 1) {
+        if ((res.total ?? 0) === 0 && page === 1) {
           setError("No mentors found. Try adjusting your search or check back later!");
         } else {
           setError(null);
@@ -75,12 +94,11 @@ export default function MentorsComponent() {
         if (!mounted) return;
         setError("We couldn't load mentors right now. Please try again soon.");
       } finally {
-        // avoid return inside finally (no-unsafe-finally)
         if (mounted) {
           if (page === 1) {
             setTimeout(() => {
               if (mounted) setLoading(false);
-            }, 1500);
+            }, 600);
           } else {
             setLoadingMore(false);
           }
@@ -93,7 +111,7 @@ export default function MentorsComponent() {
     return () => {
       mounted = false;
     };
-  }, [page, limit]);
+  }, [page, limit, filters?.name, filters?.tech]); // re-fetch when filters change
 
   return (
     <MentorsComponentWrapper>
