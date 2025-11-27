@@ -1,6 +1,19 @@
-import styled from "styled-components";
-import { primaryFont } from "../fonts";
+import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 import { FaFly } from "react-icons/fa6";
+import { primaryFont } from "../fonts";
+
+const animation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 export const HeroWrapper = styled.section`
   margin: 0 auto;
@@ -67,7 +80,7 @@ export const HeroButtonWrapper = styled.div`
   width: 100%;
 `;
 
-export const HeroButton = styled.button`
+export const HeroButton = styled(Link)`
   width: 100%;
   border: none;
   outline: none;
@@ -96,7 +109,7 @@ export const HeroButton = styled.button`
   }
 
   @media (min-width: 768px) {
-    width: auto;
+    max-width: 22rem;
   }
 `;
 
@@ -104,6 +117,10 @@ export const HeroButtonIcon = styled(FaFly)`
   font-size: 2.4rem;
   color: ${(p) => p.theme.colors.buttonTextColor};
   user-select: none;
+
+  ${HeroButton}:hover & {
+    animation: ${animation} 3s infinite;
+  }
 `;
 
 export const HeroImgWrapper = styled.div`
@@ -117,4 +134,6 @@ export const HeroImgWrapper = styled.div`
 
 export const HeroImg = styled.img`
   width: 100%;
+  min-height: 17.4rem;
+  object-fit: contain;
 `;

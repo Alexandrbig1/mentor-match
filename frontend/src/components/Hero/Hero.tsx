@@ -16,12 +16,11 @@ export default function Hero() {
       <HeroTitleWrapper>
         <HeroTitle>Dive in Tech with our Mentors Match app</HeroTitle>
         <HeroText>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex molestiae
-          eos consequatur, minus assumenda alias fugit sequi distinctio
-          reprehenderit beatae.
+          Connect with experienced mentors, explore technologies, and advance
+          your career in tech. Your journey starts here!
         </HeroText>
         <HeroButtonWrapper>
-          <HeroButton>
+          <HeroButton to="/mentors" aria-label="Get Started with Mentor Match">
             <HeroButtonIcon />
             Get Started
           </HeroButton>

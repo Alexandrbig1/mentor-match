@@ -56,11 +56,15 @@ export const FormWrapper = styled.form<{ $mobileOpen?: boolean }>`
 `;
 
 export const FormTitle = styled.h2`
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-family: ${primaryFont};
   color: ${(p) => p.theme.colors.mainTextColor};
   font-weight: 400;
   text-transform: capitalize;
+
+  @media (min-width: 768px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const FormNameWrapper = styled.div`
@@ -159,7 +163,7 @@ export const TechnologyErrorText = styled.p`
   font-size: 1.4rem;
   font-family: ${primaryFont};
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.32;
 `;
 
 export const FormTechnologyIconWrapper = styled.span<IconWrapperProps>`
@@ -259,7 +263,7 @@ export const MobilePanelCloseButton = styled.button`
     display: inline-flex;
     position: absolute;
     right: 1.4rem;
-    top: 2.4rem;
+    top: 1.6rem;
     background: transparent;
     color: ${(p) => p.theme.colors.mainTextColor};
     border: none;

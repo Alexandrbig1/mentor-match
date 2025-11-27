@@ -23,10 +23,10 @@ export const ErrorText = styled.p`
   font-size: 1.6rem;
   font-family: ${primaryFont};
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.16;
 `;
 
 export const ErrorIcon = styled.svg`
-  width: 6.4rem;
-  height: 6.4rem;
+  width: 4.8rem;
+  height: 4.8rem;
 `;

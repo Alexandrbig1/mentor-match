@@ -100,6 +100,7 @@ export const HeaderMentorButton = styled.button`
   border-radius: 1.2rem;
   background-color: ${(p) => p.theme.colors.headerButtonBgAccentColor};
   color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
+  font-weight: 500;
   width: 100%;
   min-width: 18rem;
   display: flex;
