@@ -67,6 +67,38 @@ export const FormTitle = styled.h2`
   }
 `;
 
+/* new: actions row and reset button */
+export const FormActions = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+`;
+
+/* small clear/reset button */
+export const ResetButton = styled.button`
+  background: transparent;
+  border: 1px solid ${(p) => p.theme.colors.formBorderColor};
+  color: ${(p) => p.theme.colors.secondaryTextColor};
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--primary-transition);
+
+  &:hover {
+    border-color: ${(p) => p.theme.colors.linkColor};
+    color: ${(p) => p.theme.colors.linkColor};
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 768px) {
+    /* slightly smaller on mobile inside panel */
+    padding: 6px 8px;
+    font-size: 1.1rem;
+  }
+`;
+
 export const FormNameWrapper = styled.div`
   display: flex;
   align-items: center;

@@ -19,6 +19,8 @@ import {
   MobileFilterButton,
   MobileOverlay,
   MobilePanelCloseButton,
+  FormActions,
+  ResetButton,
 } from "./Form.styled";
 
 type Filters = { name?: string; tech?: string[] };
@@ -29,11 +31,11 @@ export default function Form({
   onChangeFilters?: (filters: Filters) => void;
 }) {
   const [technologies, setTechnologies] = useState<string[]>([]);
-  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
   const [name, setName] = useState("");
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -97,6 +99,14 @@ export default function Form({
     );
   };
 
+  const resetFilters = () => {
+    setName("");
+    setSelectedTechs([]);
+    // notify parent to clear filters -> show all mentors
+    onChangeFilters?.({});
+    // optionally close mobile panel: setMobileOpen(false);
+  };
+
   return (
     <>
       {/* FormWrapper receives transient prop $mobileOpen to control mobile visibility */}
@@ -109,7 +119,18 @@ export default function Form({
           ✕
         </MobilePanelCloseButton>
 
-        <FormTitle>Search Mentors</FormTitle>
+        {/* Actions row: title + clear */}
+        <FormActions>
+          <FormTitle>Search Mentors</FormTitle>
+          <ResetButton
+            type="button"
+            onClick={resetFilters}
+            aria-label="Clear filters"
+          >
+            Clear
+          </ResetButton>
+        </FormActions>
+
         <FormNameWrapper>
           <FormNameInput
             type="text"
