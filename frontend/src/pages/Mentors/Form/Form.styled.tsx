@@ -21,7 +21,11 @@ const searchIconRotate = keyframes`
 
 /* typed transient props for styled components */
 type IconWrapperProps = { $color?: string };
-type TechnologyLabelProps = { $color?: string; $hoverColor?: string; $checked?: boolean };
+type TechnologyLabelProps = {
+  $color?: string;
+  $hoverColor?: string;
+  $checked?: boolean;
+};
 
 /* FormWrapper accepts transient prop $mobileOpen to show as bottom-sheet on mobile */
 export const FormWrapper = styled.form<{ $mobileOpen?: boolean }>`
@@ -41,7 +45,7 @@ export const FormWrapper = styled.form<{ $mobileOpen?: boolean }>`
     display: ${(p) => (p.$mobileOpen ? "flex" : "none")};
     width: calc(100% - 48px);
     max-width: 960px;
-    padding: 1.4rem;
+    padding: 2.4rem 1.4rem;
     border-radius: 12px 12px 0 0;
     position: fixed;
     left: 50%;
@@ -67,12 +71,12 @@ export const FormTitle = styled.h2`
   }
 `;
 
-/* new: actions row and reset button */
+/* actions row and reset button */
 export const FormActions = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 1.2rem;
 `;
 
 /* small clear/reset button */
@@ -80,22 +84,22 @@ export const ResetButton = styled.button`
   background: transparent;
   border: 1px solid ${(p) => p.theme.colors.formBorderColor};
   color: ${(p) => p.theme.colors.secondaryTextColor};
-  padding: 6px 10px;
+  padding: 6px 8px;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all var(--primary-transition);
 
-  &:hover {
-    border-color: ${(p) => p.theme.colors.linkColor};
-    color: ${(p) => p.theme.colors.linkColor};
-    transform: translateY(-1px);
+  @media (min-width: 768px) {
+    padding: 6px 10px;
+    font-size: 1.2rem;
   }
 
-  @media (max-width: 768px) {
-    /* slightly smaller on mobile inside panel */
-    padding: 6px 8px;
-    font-size: 1.1rem;
+  &:hover {
+    border-color: ${(p) => p.theme.colors.linkColor};
+    background-color: #f1f6fa;
+    color: ${(p) => p.theme.colors.linkColor};
+    transform: translateY(-1px);
   }
 `;
 
@@ -109,12 +113,12 @@ export const FormNameWrapper = styled.div`
 
   &:hover {
     border-color: ${(p) => p.theme.colors.linkColor};
-    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   }
 
   &:focus-within {
     border-color: ${(p) => p.theme.colors.linkColor};
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     background: ${(p) => p.theme.colors.selectionLightBgColor || "transparent"};
   }
 `;
@@ -268,7 +272,7 @@ export const MobileFilterButton = styled.button`
     padding: 1.4rem 2.4rem;
     border-radius: 1.2rem;
     font-size: 1.4rem;
-    box-shadow: 0 8px 20px rgba(2,6,23,0.12);
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.12);
     cursor: pointer;
     text-transform: uppercase;
   }
@@ -295,7 +299,7 @@ export const MobilePanelCloseButton = styled.button`
     display: inline-flex;
     position: absolute;
     right: 1.4rem;
-    top: 1.6rem;
+    top: 0.4rem;
     background: transparent;
     color: ${(p) => p.theme.colors.mainTextColor};
     border: none;

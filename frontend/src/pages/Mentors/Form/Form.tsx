@@ -125,9 +125,9 @@ export default function Form({
           <ResetButton
             type="button"
             onClick={resetFilters}
-            aria-label="Clear filters"
+            aria-label="Reset filters"
           >
-            Clear
+            Reset
           </ResetButton>
         </FormActions>
 
