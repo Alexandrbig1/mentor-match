@@ -27,6 +27,7 @@ export default function MobileHeader() {
     return () => {
       document.body.style.overflow = "";
     };
+
   }, [open]);
 
   return (
@@ -43,9 +44,9 @@ export default function MobileHeader() {
         </BurgerButton>
       </MobileHeaderBurgerWrapper>
 
-      <Overlay visible={open} onClick={() => setOpen(false)} />
+      <Overlay $visible={open} onClick={() => setOpen(false)} />
 
-      <MobileMenu open={open} aria-hidden={!open}>
+      <MobileMenu $open={open}>
         <MobileMenuHeader>
           <Logo />
           <MobileCloseButton

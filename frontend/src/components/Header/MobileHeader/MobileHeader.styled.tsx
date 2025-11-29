@@ -23,12 +23,12 @@ export const BurgerButton = styled.button`
   color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
-export const Overlay = styled.div<{ visible: boolean }>`
+export const Overlay = styled.div<{ $visible?: boolean }>`
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.36);
-  opacity: ${(p) => (p.visible ? 1 : 0)};
-  visibility: ${(p) => (p.visible ? "visible" : "hidden")};
+  opacity: ${(p) => (p.$visible ? 1 : 0)};
+  visibility: ${(p) => (p.$visible ? "visible" : "hidden")};
   transition: opacity 240ms ease, visibility 240ms ease;
   z-index: 999;
 
@@ -37,7 +37,7 @@ export const Overlay = styled.div<{ visible: boolean }>`
   }
 `;
 
-export const MobileMenu = styled.aside<{ open: boolean }>`
+export const MobileMenu = styled.aside<{ $open?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -46,7 +46,7 @@ export const MobileMenu = styled.aside<{ open: boolean }>`
   max-width: 34rem;
   background: ${(p) => p.theme.colors.mainBgColor};
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.12);
-  transform: translateX(${(p) => (p.open ? "0" : "-100%")});
+  transform: translateX(${(p) => (p.$open ? "0" : "-100%")});
   transition: transform 300ms cubic-bezier(0.2, 0.9, 0.2, 1);
   z-index: 1000;
   padding: 20px;
