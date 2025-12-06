@@ -111,7 +111,7 @@ export default function MentorsComponent({
     return () => {
       mounted = false;
     };
-  }, [page, limit, filters?.name, filters?.tech]); // re-fetch when filters change
+  }, [page, limit, filters?.name, filters?.tech]);
 
   return (
     <MentorsComponentWrapper>

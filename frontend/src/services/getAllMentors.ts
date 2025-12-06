@@ -16,18 +16,18 @@ type GetAllMentorsParams = {
   tech?: string[];
 };
 
-export const getAllMentors = async ({ page = 1, limit = 20, name, tech }: GetAllMentorsParams = {}): Promise<MentorsResponse> => {
-  if (!VITE_Get_All_Mentors) {  
-    throw new Error("VITE_Get_All_Mentors env variable is not set");
-  }
-   try {
-    const qs = new URLSearchParams();
-    qs.append("page", String(page));
-    qs.append("limit", String(limit));
-    if (name) qs.append("name", String(name));
-    if (tech && tech.length) {
-      tech.forEach((t) => qs.append("tech", String(t)));
+  export const getAllMentors = async ({ page = 1, limit = 20, name, tech }: GetAllMentorsParams = {}): Promise<MentorsResponse> => {
+    if (!VITE_Get_All_Mentors) {  
+      throw new Error("VITE_Get_All_Mentors env variable is not set");
     }
+    try {
+      const qs = new URLSearchParams();
+      qs.append("page", String(page));
+      qs.append("limit", String(limit));
+      if (name) qs.append("name", String(name));
+      if (tech && tech.length) {
+        tech.forEach((t) => qs.append("tech", String(t)));
+      }
 
     const url = `${VITE_Get_All_Mentors}?${qs.toString()}`;
 
