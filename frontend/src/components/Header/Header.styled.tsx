@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
 import { primaryFont } from "../fonts";
 
@@ -92,7 +92,7 @@ export const HeaderMentorButtonIcon = styled(IoIosArrowForward)`
   margin-right: -4px;
 `;
 
-export const HeaderMentorButton = styled.button`
+export const HeaderMentorButton = styled(Link)`
   border: none;
   outline: none;
   background: none;

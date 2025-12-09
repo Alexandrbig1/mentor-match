@@ -28,7 +28,7 @@ export default function Header() {
         </nav>
         <HeaderMentorButtonThemeWrapper>
           <ThemeSwitcher />
-          <HeaderMentorButton>
+          <HeaderMentorButton to="/become-a-mentor">
             Become a Mentor
             <HeaderMentorButtonIcon />
           </HeaderMentorButton>
