@@ -39,6 +39,10 @@ export const theme = {
       technologyWrapperBgColor: "#e5f5fcff",
       mentorSocialIcons: "#696f7d",
       newColor: "#696f7d",
+      inputAddBgColor: "#eef4ff",
+      inputAddTextColor: "#0b3a8a",
+      inputAddButtonBgColor: "#2a84ceff",
+      inputAddButtonBgHoverColor: "#37A4FE",
     },
   },
   dark: {
@@ -81,7 +85,10 @@ export const theme = {
       technologyWrapperBgColor: "#0a2c77ff",
       mentorSocialIcons: "#90a4b6ff",
       newColor: "#696f7d",
-
+      inputAddBgColor: "#eef4ff",
+      inputAddTextColor: "#0b3a8a",
+      inputAddButtonBgColor: "#2a84ceff",
+      inputAddButtonBgHoverColor: "#37A4FE",
     },
   },
 };

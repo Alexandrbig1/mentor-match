@@ -41,6 +41,10 @@ declare module "styled-components" {
       technologyWrapperBgColor: string;
       mentorSocialIcons: string;
       newColor: string;
+      inputAddBgColor: string;
+      inputAddTextColor: string;
+      inputAddButtonBgColor: string;
+      inputAddButtonBgHoverColor: string;
     };
   }
 }

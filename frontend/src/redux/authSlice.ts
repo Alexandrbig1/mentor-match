@@ -41,8 +41,9 @@ const handleRejected = (state: AuthState, action: any) => {
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials: { name?: string; email: string; password: string }) => {
-    const { data } = await api.post('/auth/register', credentials)
+    const { data } = await api.post('/api/auth/register', credentials)
     // expecting { user, token }
+    console.log(data)
     return data
   },
 )
@@ -51,12 +52,13 @@ export const login = createAsyncThunk(
   'auth/login',
   async (credentials: { email: string; password: string }) => {
     const { data } = await api.post('/auth/login', credentials)
+    console.log(data)
     return data
   },
 )
 
 export const logout = createAsyncThunk('auth/logout', async () => {
-  await api.post('/auth/logout')
+  await api.post('/api/auth/logout')
   return
 })
 
