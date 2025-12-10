@@ -6,6 +6,7 @@ import rateLimit from "express-rate-limit";
 import mentorRouter from "./routes/mentors.routes.js";
 import technologyRouter from "./routes/technologies.routes.js";
 import healthRouter from "./routes/health.routes.js";
+import authRouter from "./routes/auth.routes.js";
 
 const app = express();
 
@@ -45,9 +46,7 @@ const writeLimiter = rateLimit({
 app.use("/api/mentors", readLimiter, mentorRouter);
 app.use("/api/technologies", readLimiter, technologyRouter);
 
-// Example: mount auth router with authLimiter
-// import authRouter from './routes/auth.routes.js'
-// app.use('/api/auth', authLimiter, authRouter);
+app.use("/api/auth", authLimiter, authRouter);
 
 // Apply writeLimiter only for write verbs under /api
 app.use("/api", (req, res, next) => {

@@ -24,11 +24,14 @@
     "seed": "cross-env NODE_ENV=development node ./src/seed/seedMentors.js"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-rate-limit": "^8.0.1",
     "helmet": "^8.1.0",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^8.16.4",
     "morgan": "^1.10.1"
   },
