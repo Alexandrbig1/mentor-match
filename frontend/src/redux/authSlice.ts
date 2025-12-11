@@ -51,7 +51,7 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk(
   'auth/login',
   async (credentials: { email: string; password: string }) => {
-    const { data } = await api.post('/auth/login', credentials)
+    const { data } = await api.post('/api/auth/login', credentials)
     console.log(data)
     return data
   },
@@ -69,7 +69,7 @@ export const refreshUser = createAsyncThunk(
     const token = state.auth.token || null
     if (!token) return thunkAPI.rejectWithValue('No token')
     setAuthHeader(token)
-    const { data } = await api.get('/auth/me')
+    const { data } = await api.get('/api/auth/me')
     return data
   },
 )

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import {
   PageWrapper,
   CardForm,
@@ -29,6 +31,7 @@ import {
 type SocialLink = { platform: string; url: string };
 
 const BecomeAMentor: React.FC = () => {
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [position, setPosition] = useState("");
@@ -112,7 +115,59 @@ const BecomeAMentor: React.FC = () => {
     setError(null);
     setSuccess(null);
 
-    // logic to submit the form data
+     // Build payload
+    const payload = {
+      name: name.trim(),
+      position: position.trim() || null,
+      technologies,
+      phone: phone.trim() || null,
+      email: email.trim() || null,
+      location: location.trim() || null,
+      socialLinks: socialLinks
+        .map((s) => ({
+          platform: s.platform.trim() || undefined,
+          url: s.url.trim() || undefined,
+        }))
+        .filter((s) => s.platform && s.url),
+      coreValues,
+      description: description.trim() || null,
+    };
+
+    try {
+      // Detect API endpoint: prefer env var, fallback to /api/mentors
+      const base =
+        (import.meta.env as Record<string, string | undefined>)
+          .VITE_CREATE_MENTOR ||
+        (import.meta.env as Record<string, string | undefined>).VITE_API_BASE ||
+        "/api/mentors";
+
+      const url = base.toString().endsWith("/api/mentors")
+        ? base.toString()
+        : `${base.toString().replace(/\/$/, "")}/api/mentors`;
+
+      const token =
+        localStorage.getItem("token") ||
+        localStorage.getItem("authToken") ||
+        "";
+
+      const headers: Record<string, string> = {
+        "Content-Type": "application/json",
+      };
+      if (token) headers["Authorization"] = `Bearer ${token}`;
+
+      const res = await axios.post(url, payload, { headers });
+
+      setSuccess("Application submitted. Your profile is created.");
+      // optionally navigate to mentor profile page, change path as needed:
+      setTimeout(() => {
+        navigate("/mentors"); // or navigate to newly created mentor page if response has id
+      }, 900);
+    } catch (err: any) {
+      console.error("Submit error:", err);
+      setError(err?.response?.data?.message || "Failed to submit. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
