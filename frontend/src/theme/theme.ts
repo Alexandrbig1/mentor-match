@@ -43,6 +43,7 @@ export const theme = {
       inputAddTextColor: "#0b3a8a",
       inputAddButtonBgColor: "#2a84ceff",
       inputAddButtonBgHoverColor: "#37A4FE",
+      loginBgColor: "#f3fdffff",
     },
   },
   dark: {
@@ -89,6 +90,7 @@ export const theme = {
       inputAddTextColor: "#0b3a8a",
       inputAddButtonBgColor: "#2a84ceff",
       inputAddButtonBgHoverColor: "#37A4FE",
+      loginBgColor: "#194258",
     },
   },
 };

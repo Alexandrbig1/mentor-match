@@ -45,6 +45,7 @@ declare module "styled-components" {
       inputAddTextColor: string;
       inputAddButtonBgColor: string;
       inputAddButtonBgHoverColor: string;
+      loginBgColor: string;
     };
   }
 }

@@ -19,6 +19,7 @@ import {
   UserName,
   UserPopover,
   PopoverItem,
+  UserIcon
 } from "./Header.styled";
 
 export default function Header() {
@@ -106,8 +107,11 @@ export default function Header() {
                 aria-haspopup="menu"
                 aria-expanded={menuOpen}
                 onClick={() => setMenuOpen((s) => !s)}
-              >
+                >
+                  <UserIcon>
+
                 <FaUser />
+                  </UserIcon>
                 <UserName>{displayName}</UserName>
               </UserButton>
 

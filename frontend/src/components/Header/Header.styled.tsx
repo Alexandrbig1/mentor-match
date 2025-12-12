@@ -92,22 +92,15 @@ export const UserMenuWrapper = styled.div`
 `;
 
 export const UserButton = styled.button`
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 8px;
-  background: ${(p) => p.theme.colors.headerButtonBgAccentColor};
-  color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
+  color: ${(p) => p.theme.colors.mainTextColor};
   border: none;
   padding: 10px 14px;
   border-radius: 12px;
   cursor: pointer;
-  font-weight: 600;
-  min-width: 12rem;
   justify-content: center;
-
-  svg {
-    font-size: 1.25rem;
-  }
 
   &:focus {
     outline: 2px solid ${(p) => p.theme.colors.linkColor};
@@ -117,16 +110,22 @@ export const UserButton = styled.button`
 
 export const UserName = styled.span`
   font-size: 1.4rem;
-  color: ${(p) => p.theme.colors.headerButtonTextAccentColor};
+  color: ${(p) => p.theme.colors.mainTextColor};
+  font-weight: 600;
+`;
+
+export const UserIcon = styled.span`
+  font-size: 1.6rem ;
+  color: ${(p) => p.theme.colors.mainTextColor};
 `;
 
 /* Popover appears below the user button */
 export const UserPopover = styled.div<{ $open?: boolean }>`
   position: absolute;
-  right: 0;
+  left: 50%;
   top: calc(100% + 10px);
   min-width: 14rem;
-  background: ${(p) => p.theme.colors.cardBg || "#fff"};
+  background: ${(p) => p.theme.colors.mainBgColor || "#b70707"};
   border: 1px solid ${(p) => p.theme.colors.formBorderColor};
   box-shadow: 0 12px 40px rgba(8, 20, 50, 0.08);
   border-radius: 10px;
@@ -135,7 +134,7 @@ export const UserPopover = styled.div<{ $open?: boolean }>`
   transition: opacity 160ms ease, transform 160ms ease, visibility 160ms;
   opacity: ${(p) => (p.$open ? 1 : 0)};
   visibility: ${(p) => (p.$open ? "visible" : "hidden")};
-  transform: translateY(${(p) => (p.$open ? "0" : "-6px")});
+  transform: translateY(${(p) => (p.$open ? "0" : "-6px")}) translateX(-50%);
   z-index: 1100;
   will-change: opacity, transform;
 `;
