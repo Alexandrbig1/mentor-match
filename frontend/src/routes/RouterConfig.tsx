@@ -11,6 +11,7 @@ import PrivateRoute from "../components/PrivateRoute";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const Mentors = lazy(() => import("../pages/Mentors/Mentors"));
+const UserProfile = lazy(() => import("../pages/UserProfile/UserProfile"));
 
 export const RouterConfig = (): RouteObject[] =>
   createRoutesFromElements(
@@ -33,13 +34,21 @@ export const RouterConfig = (): RouteObject[] =>
           }
       />
       <Route
-          path="/become-a-mentor"
-          element={
-            <PrivateRoute>
-              <BecomeAMentor />
-            </PrivateRoute>
-          }
-        />
+        path="/become-a-mentor"
+        element={
+          <PrivateRoute>
+            <BecomeAMentor />
+          </PrivateRoute>
+        }
+      />
+     <Route
+        path="/profile"
+        element={
+          <PrivateRoute>
+            <UserProfile />
+          </PrivateRoute>
+        }
+      />
       <Route path="mentors" element={<Mentors />} />
       <Route path="*" element={<PageNotFound />} />
     </Route>

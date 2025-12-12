@@ -17,7 +17,7 @@ export const Card = styled.form`
   background: ${(p) => p.theme.colors.loginBgColor};
   border-radius: 14px;
   padding: 28px;
-  box-shadow: 0 12px 40px rgba(8, 20, 50, 0.06);
+  box-shadow: 0 12px 40px ${(p) => p.theme.colors.heroBoxShadow};
   display: flex;
   flex-direction: column;
   gap: 14px;
