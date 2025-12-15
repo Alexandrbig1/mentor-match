@@ -27,7 +27,7 @@
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.554.0",
     "modern-normalize": "^3.0.1",
-    "react": "^18.3.1",
+    "react": "^19.2.3",
     "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
-    "@types/react": "^19.1.8",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^9.31.0",
