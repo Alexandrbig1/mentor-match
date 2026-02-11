@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@sentry/react": "^10.27.0",
-    "axios": "^1.9.0",
+    "axios": "^1.13.5",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.554.0",
     "modern-normalize": "^3.0.1",
